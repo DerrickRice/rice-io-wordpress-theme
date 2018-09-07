@@ -249,30 +249,29 @@ if( ! function_exists( 'perfect_portfolio_social_links' ) ) :
 /**
  * Social Links 
 */
-function perfect_portfolio_social_links( $echo = true ){ 
-
+function perfect_portfolio_social_links( $echo = true ){
     $social_links = get_theme_mod( 'social_links' );
-    $ed_social    = get_theme_mod( 'ed_social_links', false ); 
-        
-    if( $ed_social && $social_links && $echo ){ ?>
-    <ul class="social-icons">
-    	<?php 
-        foreach( $social_links as $link ){
-    	   if( $link['link'] ){ ?>
-            <li><a href="<?php echo esc_url( $link['link'] ); ?>" target="_blank" rel="nofollow" class="<?php echo esc_attr( $link['font'] ); ?>"></a></li>    	   
-            <?php
-            } 
-        } 
-        ?>
-	</ul>
-    <?php    
+    $ed_social    = get_theme_mod( 'ed_social_links', false );
+
+    if( $ed_social && $social_links && $echo ){
+?>
+      <ul class="social-icons">
+<?php
+      foreach( $social_links as $link ){
+        if( $link['link'] ){
+?>
+            <li><a href="<?php echo esc_url( $link['link'] ); ?>" target="_blank" rel="nofollow"><i class="<?php echo esc_attr( $link['font'] ); ?>"></i></a></li>
+<?php
+        }
+      }
+?>
+      </ul>
+<?php
     }elseif( $ed_social && $social_links ){
         return true;
     }else{
         return false;
     }
-    ?>
-    <?php                                
 }
 endif;
 

@@ -143,13 +143,13 @@ function perfect_portfolio_customize_register_general( $wp_customize ) {
 				'fields'  => array(
                     'font' => array(
                         'type'        => 'font',
-                        'label'       => __( 'Font Awesome Icon', 'perfect-portfolio' ),
-                        'description' => __( 'Example: fa-bell', 'perfect-portfolio' ),
+                        'label'       => __( 'Font Awesome class', 'perfect-portfolio' ),
+                        'description' => __( 'Example: fa fa-bell (see fontawesome.com)', 'perfect-portfolio' ),
                     ),
                     'link' => array(
                         'type'        => 'url',
                         'label'       => __( 'Link', 'perfect-portfolio' ),
-                        'description' => __( 'Example: http://facebook.com', 'perfect-portfolio' ),
+                        'description' => __( 'Example: https://facebook.com', 'perfect-portfolio' ),
                     )
                 ),
                 'row_label' => array(
