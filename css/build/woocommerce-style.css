@@ -346,7 +346,7 @@ form.woocommerce-product-search {
 }
 .woocommerce-product-search button[type="submit"]::before {
 	content: "\f002";
-	font-family: fontawesome;
+	font-family: FontAwesome;
 	font-weight: 400;
 	position: absolute;
 	top: 0;

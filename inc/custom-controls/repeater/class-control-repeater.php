@@ -204,9 +204,7 @@ if( ! class_exists( 'Perfect_Portfolio_Control_Repeater' ) ) {
     					if( 'color' === $field['type'] ){ 
                             wp_enqueue_script( 'wp-color-picker' );
                             wp_enqueue_style( 'wp-color-picker' );
-    					}elseif( 'font' === $field['type'] ){
-                            wp_enqueue_style( 'font-awesome', get_template_directory_uri(). '/css/font-awesome.min.css', array(), '4.7' );
-    					}
+              }
     				}
     			}
     		}
@@ -242,8 +240,6 @@ if( ! class_exists( 'Perfect_Portfolio_Control_Repeater' ) ) {
     		<?php
     
     		$this->repeater_js_template();
-            
-            $this->get_icon_list();
     	}
     
     	/**
@@ -506,22 +502,5 @@ if( ! class_exists( 'Perfect_Portfolio_Control_Repeater' ) ) {
     		}
     	}
         
-        function get_icon_list(){
-    	    $icons = include wp_normalize_path( get_template_directory() . '/inc/fontawesome.php' ); 
-            if( $icons ){ ?>
-            <div class="font-awesome-list-template">
-                <div class="font-awesome-list">
-                    <ul class="font-group">
-                    <?php
-                        foreach( $icons as $font ){
-                            echo '<li><i class="fa ' . esc_attr( $font ) . '"></i></li>';
-                        }
-                    ?>
-                    </ul>
-                </div>
-            </div>
-            <?php
-            }
-        }    
     }
 }

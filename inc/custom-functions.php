@@ -191,8 +191,6 @@ function perfect_portfolio_scripts(){
     if( perfect_portfolio_is_woocommerce_activated() ) {
         wp_enqueue_style( 'perfect-portfolio-woocommerce-style', get_template_directory_uri(). '/css' . $build . '/woocommerce-style' . $suffix . '.css', array( 'perfect-portfolio-style' ), PERFECT_PORTFOLIO_THEME_VERSION );
     }
-    wp_enqueue_script( 'fontawesome-all', get_template_directory_uri() . '/js' . $build . '/fontawesome-all' . $suffix . '.js', array( 'jquery' ), '5.0.13', true );
-    wp_enqueue_script( 'fontawesome-shim', get_template_directory_uri() . '/js' . $build . '/fontawesome-shim' . $suffix . '.js', array( 'jquery' ), '5.2.0', true );
     wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js' . $build . '/owl.carousel' . $suffix . '.js', array( 'jquery' ), '2.2.1', true );
 
     wp_enqueue_script( 'perfect-scrollbar', get_template_directory_uri() . '/js'. $build .'/perfect-scrollbar'. $suffix .'.js', array('jquery'), '1.3.0', true );

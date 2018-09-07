@@ -1177,7 +1177,7 @@ COMMENTS AREA
 }
 .comment-body .reply .comment-reply-link:before {
 	content: "\f112";
-	font-family: fontawesome;
+	font-family: FontAwesome;
 	font-size: 14px;
 	position: absolute;
 	top: 3px;
@@ -1377,7 +1377,7 @@ span.page-numbers.current {
 }
 .nav-links div[class*="nav-"] a::before {
 	content: "\f104";
-	font-family: fontawesome;
+	font-family: FontAwesome;
 	font-size: 20px;
 	position: absolute;
 	top: 2px;
@@ -2274,7 +2274,7 @@ section.gallery-section.style3 .tc-wrapper,
 }
 .owl-theme .owl-nav [class*='owl-']:before {
 	content: "\f053";
-	font-family: fontawesome;
+	font-family: FontAwesome;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -3073,7 +3073,7 @@ RARATHEME FAQ WIDGET
 
 .widget_raratheme_companion_faqs_widget .accordion li a::after {
 	content: "\f107";
-	font-family: fontawesome;
+	font-family: FontAwesome;
 	font-size: 1.3em;
 	position: absolute;
 	top: 0;

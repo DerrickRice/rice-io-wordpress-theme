@@ -83,11 +83,6 @@ GNU General Public License for more details.
 
 Perfect Portfolio bundles the following third-party resources:
 
-Font Awesome icons, Copyright Dave Gandy
-Icons License: CC BY 4.0 
-Fonts License: SIL OFL 1.1 
-Source: http://fontawesome.io/
-
 Owl-carousel, Copyright 2013-2017 David Deutsch 
 License : MIT
 Source  : https://owlcarousel2.github.io/OwlCarousel2
