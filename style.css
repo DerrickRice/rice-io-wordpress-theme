@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -554,26 +554,6 @@ a:hover, a:focus, a:active {
   text-decoration: underline;
 }
 
-/*
- * Add chain or envelop in front of each link that has no other class or
- * explicitly asks for 'iconify'
- */
-a:not([class]):before,
-a.iconify:before
-{
-  font-family: FontAwesome;
-  content: "\f0c1";
-  padding-right: 0.5ex;
-  font-size: 75%;
-  opacity: 0.75;
-}
-
-a[href^="mailto:"]:not([class]):before,
-a[href^="mailto:"].iconify:before,
-{
-  content: "\f003";
-}
-
 
 /*--------------------------------------------------------------
 ## Menus
@@ -919,12 +899,6 @@ body.custom-background #page {
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 20px;
-}
-.widget a {
-  color: #1c1b1b;
-}
-.widget a:hover {
-  color: #05d584;
 }
 blockquote {
   margin: 60px 0;
@@ -3288,6 +3262,9 @@ FOOTER SECTION
 }
 .top-footer .widget_text .textwidget {
   font-size: 0.8em;
+  color: #1c1b1b;
+}
+.top-footer a {
   color: #1c1b1b;
 }
 .widget_text .textwidget p:last-child {
