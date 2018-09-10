@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -986,23 +986,6 @@ section[class*="-section"] .widget-title {
 .section-title {
   margin-bottom: 50px;
 }
-section[class*="-section"] .widget-title span,
-.section-title span {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-}
-section[class*="-section"] .widget-title:after,
-.section-title span:after {
-  content: "";
-  background: #d2fcec;
-  width: 100%;
-  height: 40%;
-  position: absolute;
-  top: 5px;
-  left: 0;
-  z-index: -1;
-}
 .page-header {
   text-align: center;
   margin-top: 30px;
@@ -1012,23 +995,6 @@ section[class*="-section"] .widget-title:after,
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 50px;
-}
-.page-header .page-title span {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-.page-header .page-title span:before {
-  content: "";
-  background: #d2fcec;
-  width: 100%;
-  height: 40%;
-  position: absolute;
-  top: 5px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: -1;
 }
 .widget .post-date {
   font-size: 14px;
@@ -3354,21 +3320,6 @@ header.entry-header .entry-title {
   line-height: 1.3;
   word-wrap: break-word;
 }
-header.entry-header .entry-title span {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-header.entry-header .entry-title span:before {
-  content: "";
-  background: #d2fcec;
-  width: 100%;
-  height: 45%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
 .client-logo-wrap:before,
 .client-logo-wrap:after {
   content: "";
@@ -3769,23 +3720,6 @@ RELATED POST SECTION
 .additional-posts .title {
   margin-bottom: 30px;
   font-weight: 500;
-}
-.related .related-title span {
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-}
-.related .related-title span:before {
-  content: "";
-  background: #d2fcec;
-  width: 95%;
-  height: 40%;
-  position: absolute;
-  top: 5px;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  margin: 0 auto;
 }
 .related .related-block,
 .additional-posts .block {
