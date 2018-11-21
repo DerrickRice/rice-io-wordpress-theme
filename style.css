@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.0
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -3213,31 +3213,15 @@ FOOTER SECTION
 
 .top-footer {
   background: #f8f8f8;
-  padding: 100px 0px;
 }
 .top-footer > .tc-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 110px;
   text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .top-footer > .tc-wrapper:before,
 .top-footer > .tc-wrapper:after {
   display: none;
-}
-.top-footer .col {
-  overflow: hidden;
-}
-.top-footer .widget:last-child {
-  margin-bottom: 0;
-}
-.top-footer .widget .widget-title {
-  font-size: 1em;
-  font-weight: 600;
-}
-.top-footer .widget_text .textwidget {
-  font-size: 0.8em;
-  color: #1c1b1b;
 }
 .top-footer a {
   color: #1c1b1b;
