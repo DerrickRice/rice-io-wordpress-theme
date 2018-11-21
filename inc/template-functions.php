@@ -20,7 +20,7 @@ add_action( 'perfect_portfolio_doctype', 'perfect_portfolio_doctype' );
 
 if( ! function_exists( 'perfect_portfolio_head' ) ) :
 /**
- * Before wp_head 
+ * Before wp_head
 */
 function perfect_portfolio_head(){
     ?>
@@ -48,15 +48,15 @@ if( ! function_exists( 'perfect_portfolio_header' ) ) :
 /**
  * Header Start
 */
-function perfect_portfolio_header(){ 
-       
-    $ed_cart = get_theme_mod( 'ed_shopping_cart', false ); 
-    $ed_header_search = get_theme_mod( 'ed_header_search', false ); 
+function perfect_portfolio_header(){
+
+    $ed_cart = get_theme_mod( 'ed_shopping_cart', false );
+    $ed_header_search = get_theme_mod( 'ed_header_search', false );
     $menu_description = get_theme_mod( 'menu_description', '' );
     $site_title = get_bloginfo( 'name' );
     $description = get_bloginfo( 'description', 'display' );
     $header_text = get_theme_mod( 'header_text', true );
-    
+
     if( has_custom_logo() && ( $site_title || $description ) && $header_text ) {
         $add_class = ' logo-text';
     }else{
@@ -65,7 +65,7 @@ function perfect_portfolio_header(){
     <header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
         <div class="tc-wrapper">
             <?php if( has_custom_logo() || $site_title || $description ) : ?>
-                
+
                 <div class="site-branding<?php echo esc_attr( $add_class ); ?>" itemscope itemtype="http://schema.org/Organization">
                     <?php if( has_custom_logo() ) : ?>
                         <div class="site-logo">
@@ -80,7 +80,7 @@ function perfect_portfolio_header(){
                                 <?php else : ?>
                                     <p class="site-title" itemprop="name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><?php bloginfo( 'name' ); ?></a></p>
                                 <?php endif;
-                            endif; 
+                            endif;
                             if( $description || is_customize_preview() ) : ?>
                                 <p class="site-description" itemprop="description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
                             <?php endif; ?>
@@ -88,18 +88,18 @@ function perfect_portfolio_header(){
                     <?php } ?>
                 </div><!-- .site-branding -->
             <?php endif; ?>
-    		<div class="header-r">
+            <div class="header-r">
                 <?php if( perfect_portfolio_is_woocommerce_activated() && $ed_cart ) perfect_portfolio_wc_cart_count(); ?>
                 <?php if( $ed_header_search ) : ?>
-				<div class="header-search">
+                <div class="header-search">
                     <span class="search-toggle-btn"><i class="fa fa-search"></i></span>
                     <div class="head-search-form">
-				        <?php get_search_form(); ?>
+                        <?php get_search_form(); ?>
                     </div>
-				</div>
+                </div>
                 <?php endif; ?>
-                <span class="toggle-btn"><i class="fa fa-bars"></i></span>							
-                <div class="menu-wrap">                    
+                <span class="toggle-btn"><i class="fa fa-bars"></i></span>
+                <div class="menu-wrap">
                     <nav id="site-navigation" class="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
                         <button type="button" class="toggle-button">
                             <span class="toggle-bar"></span>
@@ -126,12 +126,12 @@ function perfect_portfolio_header(){
                     <?php endif; ?>
                     <div class="menu-social">
                         <?php perfect_portfolio_social_links(); ?>
-                    </div>         
+                    </div>
                 </div>
-    		</div>
-        </div>		
-	</header>
-    <?php 
+            </div>
+        </div>
+    </header>
+    <?php
 }
 endif;
 add_action( 'perfect_portfolio_header', 'perfect_portfolio_header', 20 );
@@ -140,19 +140,19 @@ if( ! function_exists( 'perfect_portfolio_content_start' ) ) :
 /**
  * Content Start
 */
-function perfect_portfolio_content_start(){ 
+function perfect_portfolio_content_start(){
     $home_sections = perfect_portfolio_get_home_sections();
     $sidebar = perfect_portfolio_sidebar( true );
-    
+
     if( !( is_front_page() && ! is_home() && $home_sections ) ){ ?>
     <div id="content" class="site-content">
-        <?php if( ! is_singular() ) : 
+        <?php if( ! is_singular() ) :
             $add_class_name = ( is_home() ) ? 'description' : 'header';
             $add_tag_name = ( is_home() ) ? 'div' : 'header'; ?>
             <<?php echo $add_tag_name; ?> class="page-<?php echo esc_attr( $add_class_name ); ?>">
-                <div class="tc-wrapper">                
-                <?php        
-                    if ( is_home() ) : 
+                <div class="tc-wrapper">
+                <?php
+                    if ( is_home() ) :
                         echo '<h1 class="page-title">';
                         esc_html_e( 'Blog','perfect-portfolio' );
                         echo '</h1>';
@@ -168,13 +168,13 @@ function perfect_portfolio_content_start(){
                             <div class="about-author">
                                 <figure class="author-img"><?php echo get_avatar( get_the_author_meta( 'ID' ), 230 ); ?></figure>
                                 <div class="author-info-wrap">
-                                    <?php 
+                                    <?php
                                         echo '<span class="sub-title">' . esc_html__( 'All Posts by','perfect-portfolio' ) . '</span>';
                                         echo '<h3 class="name">' . esc_html( $author_title ) . '</h3>';
-                                    ?>      
+                                    ?>
                                 </div>
                             </div>
-                            <?php 
+                            <?php
                         }
                         elseif( is_category() ){
                             echo '<span class="sub-title">'. esc_html__( 'Category','perfect-portfolio' ) . '</span>';
@@ -193,16 +193,16 @@ function perfect_portfolio_content_start(){
                             the_archive_title( '<h1 class="page-title"><span>', '</span></h1>' );
                         }
                     endif;
-                    
-                    if( is_search() ) : 
+
+                    if( is_search() ) :
                         echo '<h1 class="page-title">' . esc_html__( 'Search Results', 'perfect-portfolio' ) . '</h1>';
                         get_search_form();
                     endif;
                 ?>
                 </div>
             </<?php echo $add_tag_name; ?>>
-        <?php endif; 
-    }        
+        <?php endif;
+    }
 }
 endif;
 add_action( 'perfect_portfolio_content', 'perfect_portfolio_content_start' );
@@ -213,15 +213,15 @@ if( ! function_exists( 'perfect_portfolio_single_entry_header' ) ) :
 */
 function perfect_portfolio_single_entry_header(){ ?>
     <header class="entry-header">
-		<?php 
+        <?php
             $ed_post_date  = get_theme_mod( 'ed_post_date', false );
-            
+
             if ( is_singular() ) :
-    			the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' );
-    		else :
-    			the_title( '<h2 class="entry-title" itemprop="headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-    		endif; 
-        
+                the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' );
+            else :
+                the_title( '<h2 class="entry-title" itemprop="headline"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+            endif;
+
             if( 'post' === get_post_type() ){
                 echo '<div class="entry-meta">';
                 if( is_single() ){
@@ -231,10 +231,10 @@ function perfect_portfolio_single_entry_header(){ ?>
                 }
                 perfect_portfolio_posted_by();
                 echo '</div>';
-            }		
-		?>
-	</header>         
-    <?php    
+            }
+        ?>
+    </header>
+    <?php
 }
 endif;
 add_action( 'perfect_portfolio_before_single_article', 'perfect_portfolio_single_entry_header' );
@@ -247,12 +247,12 @@ if ( ! function_exists( 'perfect_portfolio_post_thumbnail' ) ) :
  * element when on single views.
  */
 function perfect_portfolio_post_thumbnail() {
-	global $wp_query;
+    global $wp_query;
     $image_size  = 'thumbnail';
     $blog_page_layout = get_theme_mod( 'blog_page_layout', 'with-masonry-description grid' );
     $ed_featured = get_theme_mod( 'ed_featured_image', false );
     $sidebar     = perfect_portfolio_sidebar();
-    
+
     if( is_front_page() && is_home() ){
 
         if( $blog_page_layout == 'normal-grid-first-large' && $wp_query->current_post === 0 ) {
@@ -260,31 +260,31 @@ function perfect_portfolio_post_thumbnail() {
         }else{
             $image_size = 'perfect-portfolio-blog';
         }
-        echo '<figure class="post-thumbnail"><a href="' . esc_url( get_permalink() ) . '" itemprop="thumbnailUrl">';            
-        if( has_post_thumbnail() ){                        
-            the_post_thumbnail( $image_size, array( 'itemprop' => 'image' ) );    
+        echo '<figure class="post-thumbnail"><a href="' . esc_url( get_permalink() ) . '" itemprop="thumbnailUrl">';
+        if( has_post_thumbnail() ){
+            the_post_thumbnail( $image_size, array( 'itemprop' => 'image' ) );
         }else{
-            echo '<img src="' . esc_url( get_template_directory_uri() . '/images/' . $image_size . '.jpg'  ) . '" alt="' . esc_attr( get_the_title() ) . '" itemprop="image" />';    
-        }        
+            echo '<img src="' . esc_url( get_template_directory_uri() . '/images/' . $image_size . '.jpg'  ) . '" alt="' . esc_attr( get_the_title() ) . '" itemprop="image" />';
+        }
         echo '</a></figure>';
-    }elseif( is_home() ){ 
+    }elseif( is_home() ){
 
         if( $blog_page_layout == 'normal-grid-first-large' && $wp_query->current_post === 0 ) {
             $image_size = 'perfect-portfolio-fullwidth';
         }else{
             $image_size = 'perfect-portfolio-blog';
-        }       
+        }
         echo '<figure class="post-thumbnail"><a href="' . esc_url( get_permalink() ) . '" itemprop="thumbnailUrl">';
-        if( has_post_thumbnail() ){                        
-            the_post_thumbnail( $image_size, array( 'itemprop' => 'image' ) );    
+        if( has_post_thumbnail() ){
+            the_post_thumbnail( $image_size, array( 'itemprop' => 'image' ) );
         }else{
-            echo '<img src="' . esc_url( get_template_directory_uri() . '/images/' . $image_size . '.jpg'  ) . '" alt="' . esc_attr( get_the_title() ) . '" itemprop="image" />';    
-        }        
+            echo '<img src="' . esc_url( get_template_directory_uri() . '/images/' . $image_size . '.jpg'  ) . '" alt="' . esc_attr( get_the_title() ) . '" itemprop="image" />';
+        }
         echo '</a></figure>';
     }elseif( is_archive() || is_search() ){
         echo '<figure class="post-thumbnail"><a href="' . esc_url( get_permalink() ) . '" itemprop="thumbnailUrl">';
         if( has_post_thumbnail() ){
-            the_post_thumbnail( 'perfect-portfolio-blog', array( 'itemprop' => 'image' ) );    
+            the_post_thumbnail( 'perfect-portfolio-blog', array( 'itemprop' => 'image' ) );
         }else{
             echo '<img src="' . esc_url( get_template_directory_uri() . '/images/perfect-portfolio-blog.jpg'  ) . '" alt="' . esc_attr( get_the_title() ) . '" itemprop="image" />';
         }
@@ -314,7 +314,7 @@ if( ! function_exists( 'perfect_portfolio_entry_post_content' ) ) :
 /**
  * Entry Content
 */
-function perfect_portfolio_entry_post_content(){ 
+function perfect_portfolio_entry_post_content(){
     $ed_excerpt = get_theme_mod( 'ed_excerpt', true );
     $blog_page_layout = get_theme_mod( 'blog_page_layout', 'with-masonry-description grid' ); ?>
     <div class="post-content-wrap">
@@ -348,14 +348,14 @@ if( ! function_exists( 'perfect_portfolio_single_entry_content' ) ) :
 function perfect_portfolio_single_entry_content(){ ?>
     <div class="entry-content" itemprop="text">
         <?php perfect_portfolio_tc_wrapper();
-        the_content();    
-		
+        the_content();
+
         wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'perfect-portfolio' ),
-			'after'  => '</div>',
-		) );
-		perfect_portfolio_tc_wrapper_end(); ?>
-	</div><!-- .entry-content -->
+            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'perfect-portfolio' ),
+            'after'  => '</div>',
+        ) );
+        perfect_portfolio_tc_wrapper_end(); ?>
+    </div><!-- .entry-content -->
     <?php
 }
 endif;
@@ -365,11 +365,11 @@ if( ! function_exists( 'perfect_portfolio_tc_wrapper' ) ) :
 /**
  * Author Section
 */
-function perfect_portfolio_tc_wrapper() { 
+function perfect_portfolio_tc_wrapper() {
     $sidebar = perfect_portfolio_sidebar( true );
 
-    if( $sidebar != 'rightsidebar' && $sidebar != 'leftsidebar' ) { 
-        echo '<div class="tc-wrapper">';    
+    if( $sidebar != 'rightsidebar' && $sidebar != 'leftsidebar' ) {
+        echo '<div class="tc-wrapper">';
     }
 }
 endif;
@@ -382,31 +382,31 @@ if( ! function_exists( 'perfect_portfolio_navigation' ) ) :
 function perfect_portfolio_navigation(){
     if( is_single() ){
         $previous = get_previous_post_link(
-    		'<div class="nav-previous nav-holder">%link</div>',
-    		'<span class="meta-nav">' . esc_html__( 'Previous Article', 'perfect-portfolio' ) . '</span><span class="post-title">%title</span>',
-    		false,
-    		'',
-    		'category'
-    	);
-    
-    	$next = get_next_post_link(
-    		'<div class="nav-next nav-holder">%link</div>',
-    		'<span class="meta-nav">' . esc_html__( 'Next Article', 'perfect-portfolio' ) . '</span><span class="post-title">%title</span>',
-    		false,
-    		'',
-    		'category'
-    	); 
-        
-        if( $previous || $next ){?>            
+            '<div class="nav-previous nav-holder">%link</div>',
+            '<span class="meta-nav">' . esc_html__( 'Previous Article', 'perfect-portfolio' ) . '</span><span class="post-title">%title</span>',
+            false,
+            '',
+            'category'
+        );
+
+        $next = get_next_post_link(
+            '<div class="nav-next nav-holder">%link</div>',
+            '<span class="meta-nav">' . esc_html__( 'Next Article', 'perfect-portfolio' ) . '</span><span class="post-title">%title</span>',
+            false,
+            '',
+            'category'
+        );
+
+        if( $previous || $next ){?>
             <nav class="navigation post-navigation" role="navigation">
-    			<h2 class="screen-reader-text"><?php esc_html_e( 'Post Navigation', 'perfect-portfolio' ); ?></h2>
-    			<div class="nav-links">
-    				<?php
+                <h2 class="screen-reader-text"><?php esc_html_e( 'Post Navigation', 'perfect-portfolio' ); ?></h2>
+                <div class="nav-links">
+                    <?php
                         if( $previous ) echo $previous;
                         if( $next ) echo $next;
                     ?>
-    			</div>
-    		</nav>        
+                </div>
+            </nav>
             <?php
         }
     }else{
@@ -428,7 +428,7 @@ if( ! function_exists( 'perfect_portfolio_entry_footer' ) ) :
 function perfect_portfolio_entry_footer(){ ?>
     <div class="entry-footer">
         <?php
-                        
+
             if( get_edit_post_link() ){
                 edit_post_link(
                     sprintf(
@@ -452,7 +452,7 @@ function perfect_portfolio_entry_footer(){ ?>
             }
         ?>
     </div><!-- .entry-footer -->
-    <?php 
+    <?php
 }
 endif;
 add_action( 'perfect_portfolio_after_post_content', 'perfect_portfolio_entry_footer', 13 );
@@ -461,21 +461,21 @@ if( ! function_exists( 'perfect_portfolio_author' ) ) :
 /**
  * Author Section
 */
-function perfect_portfolio_author(){ 
+function perfect_portfolio_author(){
     $ed_author    = get_theme_mod( 'ed_author', false );
     $author_title = get_the_author_meta( 'display_name' );
     $author_description = get_the_author_meta( 'description' );
 
     if( $ed_author && $author_title && $author_description ){ ?>
         <div class="about-author">
-    		<figure class="author-img"><?php echo get_avatar( get_the_author_meta( 'ID' ), 230 ); ?></figure>
-    		<div class="author-info-wrap">
-    			<?php 
+            <figure class="author-img"><?php echo get_avatar( get_the_author_meta( 'ID' ), 230 ); ?></figure>
+            <div class="author-info-wrap">
+                <?php
                     if( is_author() ) echo '<span class="sub-title">' . esc_html__( 'All Posts by','perfect-portfolio' ) . '</span>';
                     echo '<h3 class="name">' . esc_html( $author_title ) . '</h3>';
                     echo '<div class="author-info">' . wpautop( wp_kses_post( $author_description ) ) . '</div>';
-                ?>		
-    		</div>
+                ?>
+            </div>
         </div>
     <?php }
 }
@@ -484,25 +484,25 @@ add_action( 'perfect_portfolio_after_post_content', 'perfect_portfolio_author', 
 
 if( ! function_exists( 'perfect_portfolio_related_posts' ) ) :
 /**
- * Related Posts 
+ * Related Posts
 */
-function perfect_portfolio_related_posts(){ 
+function perfect_portfolio_related_posts(){
     $ed_related_post = get_theme_mod( 'ed_related', false );
     if( $ed_related_post ){
-        perfect_portfolio_get_posts_list( 'related' );    
+        perfect_portfolio_get_posts_list( 'related' );
     }
 }
-endif;                                                                               
+endif;
 add_action( 'perfect_portfolio_after_post_content', 'perfect_portfolio_related_posts', 35 );
 
 if( ! function_exists( 'perfect_portfolio_popular_posts' ) ) :
 /**
  * Popular Posts
 */
-function perfect_portfolio_popular_posts(){ 
+function perfect_portfolio_popular_posts(){
     $ed_popular_post = get_theme_mod( 'ed_popular', false );
     if( $ed_popular_post ){
-        perfect_portfolio_get_posts_list( 'popular' );  
+        perfect_portfolio_get_posts_list( 'popular' );
     }
 }
 endif;
@@ -512,7 +512,7 @@ if( ! function_exists( 'perfect_portfolio_latest_posts' ) ) :
 /**
  * Latest Posts
 */
-function perfect_portfolio_latest_posts(){ 
+function perfect_portfolio_latest_posts(){
     perfect_portfolio_get_posts_list( 'latest' );
 }
 endif;
@@ -520,13 +520,13 @@ add_action( 'perfect_portfolio_latest_posts', 'perfect_portfolio_latest_posts' )
 
 if( ! function_exists( 'perfect_portfolio_tc_wrapper_end' ) ) :
 /**
- * Comments Template 
+ * Comments Template
 */
 function perfect_portfolio_tc_wrapper_end(){
     $sidebar = perfect_portfolio_sidebar( true );
 
-    if( $sidebar != 'rightsidebar' && $sidebar != 'leftsidebar' ) { 
-        echo '</div>';    
+    if( $sidebar != 'rightsidebar' && $sidebar != 'leftsidebar' ) {
+        echo '</div>';
     }
 }
 endif;
@@ -534,13 +534,13 @@ add_action( 'perfect_portfolio_after_post_content', 'perfect_portfolio_tc_wrappe
 
 if( ! function_exists( 'perfect_portfolio_comment' ) ) :
 /**
- * Comments Template 
+ * Comments Template
 */
 function perfect_portfolio_comment(){
     // If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
-		comments_template();
-	endif;
+    if ( comments_open() || get_comments_number() ) :
+        comments_template();
+    endif;
 }
 endif;
 add_action( 'perfect_portfolio_after_post_content', 'perfect_portfolio_comment', 45 );
@@ -550,10 +550,10 @@ if( ! function_exists( 'perfect_portfolio_content_end' ) ) :
 /**
  * Content End
 */
-function perfect_portfolio_content_end(){ 
+function perfect_portfolio_content_end(){
     $home_sections = perfect_portfolio_get_home_sections();
-    
-    if( !( is_front_page() && ! is_home() && $home_sections ) ){ ?>       
+
+    if( !( is_front_page() && ! is_home() && $home_sections ) ){ ?>
     </div><!-- .site-content -->
     <?php
     }
@@ -565,8 +565,8 @@ if( ! function_exists( 'perfect_portfolio_single_portfolio_thumbnail' ) ) :
 /**
  * Portfolio gallery
 */
-function perfect_portfolio_single_portfolio_thumbnail(){ 
-    
+function perfect_portfolio_single_portfolio_thumbnail(){
+
     if( is_singular( 'rara-portfolio' ) ){
         if( has_post_thumbnail() ) {
             echo '<figure class="post-thumbnail">';
@@ -575,14 +575,14 @@ function perfect_portfolio_single_portfolio_thumbnail(){
         }
     }
 }
-endif;                                                                               
+endif;
 add_action( 'perfect_portfolio_before_single_portfolio_content', 'perfect_portfolio_single_portfolio_thumbnail' );
 
 if( ! function_exists( 'perfect_portfolio_single_portfolio_content' ) ) :
 /**
- * Portfolio content 
+ * Portfolio content
 */
-function perfect_portfolio_single_portfolio_content(){ 
+function perfect_portfolio_single_portfolio_content(){
     global $post; ?>
     <div class="content-wrap-box">
         <header class="page-header">
@@ -590,7 +590,7 @@ function perfect_portfolio_single_portfolio_content(){
             if( ! empty( $category_ids ) ) { ?>
             <span class="sub-title">
                 <?php foreach( $category_ids as $category_id ){
-                    echo '<span>' . esc_html( $category_id->name ) . '</span>'; 
+                    echo '<span>' . esc_html( $category_id->name ) . '</span>';
                 } ?>
             </span>
             <?php } ?>
@@ -599,28 +599,28 @@ function perfect_portfolio_single_portfolio_content(){
         <div class="page-content">
             <?php the_content(); ?>
         </div>
-    </div>    
+    </div>
 <?php }
-endif;                                                                               
+endif;
 add_action( 'perfect_portfolio_single_portfolio_content', 'perfect_portfolio_single_portfolio_content' );
 
 if( ! function_exists( 'perfect_portfolio_single_portfolio_related_posts' ) ) :
 /**
- * Related Posts 
+ * Related Posts
 */
-function perfect_portfolio_single_portfolio_related_posts(){ 
-    perfect_portfolio_get_posts_list( 'portfolio-related' );    
+function perfect_portfolio_single_portfolio_related_posts(){
+    perfect_portfolio_get_posts_list( 'portfolio-related' );
 }
-endif;                                                                               
+endif;
 add_action( 'perfect_portfolio_after_portfolio_content', 'perfect_portfolio_single_portfolio_related_posts', 10 );
 
 if( ! function_exists( 'perfect_portfolio_call_to_action' ) ) :
 /**
  * Content End
 */
-function perfect_portfolio_call_to_action(){ 
+function perfect_portfolio_call_to_action(){
 
-    if( is_singular( 'rara-portfolio' ) ) {    
+    if( is_singular( 'rara-portfolio' ) ) {
         if ( is_active_sidebar( 'cta-footer' ) ) { ?>
             <section id="cta_section" class="cta-section">
                 <div class="v-center-inner">
@@ -651,31 +651,31 @@ if( ! function_exists( 'perfect_portfolio_footer_top' ) ) :
 /**
  * Footer Top
 */
-function perfect_portfolio_footer_top(){    
+function perfect_portfolio_footer_top(){
     if( is_active_sidebar( 'footer-one' ) || is_active_sidebar( 'footer-two' ) || is_active_sidebar( 'footer-three' ) ){ ?>
     <div class="top-footer">
-		<div class="tc-wrapper">
+        <div class="tc-wrapper">
             <?php if( is_active_sidebar( 'footer-one' ) ){ ?>
-				<div class="col">
-				   <?php dynamic_sidebar( 'footer-one' ); ?>	
-				</div>
+                <div class="col">
+                   <?php dynamic_sidebar( 'footer-one' ); ?>
+                </div>
             <?php } ?>
-			
+
             <?php if( is_active_sidebar( 'footer-two' ) ){ ?>
                 <div class="col">
-				   <?php dynamic_sidebar( 'footer-two' ); ?>	
-				</div>
+                   <?php dynamic_sidebar( 'footer-two' ); ?>
+                </div>
             <?php } ?>
-            
+
             <?php if( is_active_sidebar( 'footer-three' ) ){ ?>
                 <div class="col">
-				   <?php dynamic_sidebar( 'footer-three' ); ?>	
-				</div>
+                   <?php dynamic_sidebar( 'footer-three' ); ?>
+                </div>
             <?php } ?>
-		</div>
-	</div>
-    <?php 
-    }   
+        </div>
+    </div>
+    <?php
+    }
 }
 endif;
 add_action( 'perfect_portfolio_footer', 'perfect_portfolio_footer_top', 30 );
@@ -686,22 +686,22 @@ if( ! function_exists( 'perfect_portfolio_footer_bottom' ) ) :
 */
 function perfect_portfolio_footer_bottom(){ ?>
     <div class="bottom-footer">
-		<div class="tc-wrapper">
-            <div class="copyright">           
+        <div class="tc-wrapper">
+            <div class="copyright">
                 <?php if ( function_exists( 'the_privacy_policy_link' ) ) {
                     the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-                } 
+                }
                 perfect_portfolio_get_footer_copyright();
                 printf( esc_html__( '%1$sPerfect Portfolio%2$s by Rara Theme.', 'perfect-portfolio' ), '<a href="' . esc_url( 'https://raratheme.com/wordpress-themes/perfect-portfolio/' ) .'" rel="author" target="_blank">', '</a>' );
-                
+
                 printf( esc_html__( ' Powered by %s', 'perfect-portfolio' ), '<a href="'. esc_url( __( 'https://wordpress.org/', 'perfect-portfolio' ) ) .'" target="_blank">WordPress</a> .' );
-            ?>               
+            ?>
             </div>
             <div class="foot-social">
                 <?php perfect_portfolio_social_links(); ?>
             </div>
-		</div>
-	</div>
+        </div>
+    </div>
     <?php
 }
 endif;
@@ -709,7 +709,7 @@ add_action( 'perfect_portfolio_footer', 'perfect_portfolio_footer_bottom', 40 );
 
 if( ! function_exists( 'perfect_portfolio_back_to_top' ) ) :
 /**
- * Footer End 
+ * Footer End
 */
 function perfect_portfolio_back_to_top(){ ?>
     <div class="back-to-top">
@@ -722,7 +722,7 @@ add_action( 'perfect_portfolio_footer', 'perfect_portfolio_back_to_top', 50 );
 
 if( ! function_exists( 'perfect_portfolio_footer_end' ) ) :
 /**
- * Footer End 
+ * Footer End
 */
 function perfect_portfolio_footer_end(){ ?>
     </footer><!-- #colophon -->
