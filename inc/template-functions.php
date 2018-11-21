@@ -1,4 +1,6 @@
 <?php
+/* vim: et ts=4 sw=4
+ */
 /**
  * Perfect Portfolio Template Functions which enhance the theme by hooking into WordPress
  *
@@ -652,30 +654,13 @@ if( ! function_exists( 'perfect_portfolio_footer_top' ) ) :
  * Footer Top
 */
 function perfect_portfolio_footer_top(){
-    if( is_active_sidebar( 'footer-one' ) || is_active_sidebar( 'footer-two' ) || is_active_sidebar( 'footer-three' ) ){ ?>
+    ?>
     <div class="top-footer">
         <div class="tc-wrapper">
-            <?php if( is_active_sidebar( 'footer-one' ) ){ ?>
-                <div class="col">
-                   <?php dynamic_sidebar( 'footer-one' ); ?>
-                </div>
-            <?php } ?>
-
-            <?php if( is_active_sidebar( 'footer-two' ) ){ ?>
-                <div class="col">
-                   <?php dynamic_sidebar( 'footer-two' ); ?>
-                </div>
-            <?php } ?>
-
-            <?php if( is_active_sidebar( 'footer-three' ) ){ ?>
-                <div class="col">
-                   <?php dynamic_sidebar( 'footer-three' ); ?>
-                </div>
-            <?php } ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
         </div>
     </div>
     <?php
-    }
 }
 endif;
 add_action( 'perfect_portfolio_footer', 'perfect_portfolio_footer_top', 30 );

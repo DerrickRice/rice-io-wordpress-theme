@@ -269,7 +269,7 @@ textarea {
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 300;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -769,6 +769,12 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
   display: inline-block;
+}
+
+/* Make logo into a circle */
+img.custom-logo {
+  clip-path: circle(50% at center);
+  -webkit-clip-path: circle(50% at center);
 }
 
 /*--------------------------------------------------------------
@@ -1739,6 +1745,7 @@ ul.menu:not(.nav-menu) {
   background: #eee;
 }
 .menu-wrap .menu-search {
+  display: none;
   margin-bottom: 50px;
 }
 .menu-wrap .menu-text {
@@ -1748,6 +1755,7 @@ ul.menu:not(.nav-menu) {
   margin-bottom: 50px;
 }
 .menu-wrap .menu-social {
+  display: none;
   margin-bottom: 40px;
 }
 ul.social-icons {
@@ -3202,6 +3210,7 @@ ul.social-networks {
 /*================================
 FOOTER SECTION
 ================================*/
+
 .top-footer {
   background: #f8f8f8;
   padding: 100px 0px;
@@ -3233,6 +3242,8 @@ FOOTER SECTION
 .top-footer a {
   color: #1c1b1b;
 }
+
+
 .widget_text .textwidget p:last-child {
   margin-bottom: 0;
 }

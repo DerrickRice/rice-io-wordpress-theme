@@ -33,21 +33,6 @@ function perfect_portfolio_widgets_init(){
             'id'          => 'cta-footer', 
             'description' => __( 'Add "Rara:Call To Action" widget in footer of specific pages.', 'perfect-portfolio' ),
         ),
-        'footer-one'=> array(
-            'name'        => __( 'Footer One', 'perfect-portfolio' ),
-            'id'          => 'footer-one', 
-            'description' => __( 'Add footer one widgets here.', 'perfect-portfolio' ),
-        ),
-        'footer-two'=> array(
-            'name'        => __( 'Footer Two', 'perfect-portfolio' ),
-            'id'          => 'footer-two', 
-            'description' => __( 'Add footer two widgets here.', 'perfect-portfolio' ),
-        ),
-        'footer-three'=> array(
-            'name'        => __( 'Footer Three', 'perfect-portfolio' ),
-            'id'          => 'footer-three', 
-            'description' => __( 'Add footer three widgets here.', 'perfect-portfolio' ),
-        ),
     );
     
     foreach( $sidebars as $sidebar ){
