@@ -133,6 +133,17 @@ function perfect_portfolio_header(){
             </div>
         </div>
     </header>
+    <div id="sidenav">
+        <?php
+            wp_nav_menu( array(
+                'theme_location' => 'primary',
+                'menu_id'        => 'primary-menu',
+                'menu_class'     => 'nav-menu',
+                'container'      => false,
+                'fallback_cb'    => 'perfect_portfolio_primary_menu_fallback',
+            ) );
+        ?>
+    </div>
     <?php
 }
 endif;

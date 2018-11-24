@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.5
+Version: 1.1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -867,17 +867,17 @@ COMMON CSS
 =============================*/
 .site-content {
   margin-bottom: 2em;
-  display: grid;
-  grid-template-columns: 1fr 100px;
 }
 body.custom-background #page {
   background: #fff;
   width: 1500px;
   max-width: 95%;
   margin: 0 auto;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 25px;
+  padding-right: 25px;
   box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  display: grid;
+  grid-template-columns: 1fr 20em;
 }
 .custom-background .woocommerce-store-notice,
 .custom-background p.demo_store {
@@ -1191,6 +1191,7 @@ SITE HEADER
 header.site-header {
   padding: 50px 0;
   margin: 0;
+  grid-column: span 2;
 }
 .site-header .tc-wrapper {
   position: relative;
@@ -3000,7 +3001,8 @@ ul.social-networks {
 FOOTER SECTION
 ================================*/
 
-.site-footer .tc-wrapper {
+.site-footer {
+  grid-column: span 2;
 }
 
 .top-footer {
@@ -4736,9 +4738,6 @@ RESPONSIVE STYLESHEET
   .site-header .site-branding {
     width: 64%;
   }
-  .site-header .header-r {
-    width: 34%;
-  }
   .site-header .menu-wrap {
     width: 70%;
   }
@@ -5012,9 +5011,6 @@ RESPONSIVE STYLESHEET
   .site-header .site-branding {
     width: 67%;
   }
-  .site-header .header-r {
-    width: 31%;
-  }
   .header-r .cart,
   .header-r .header-search,
   .header-r span.toggle-btn {
@@ -5204,11 +5200,6 @@ RESPONSIVE STYLESHEET
     width: 100%;
     padding-left: 0;
     margin-top: 15px;
-  }
-  .site-header .header-r {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
   }
   .header-r .head-search-form {
     width: 300px;
