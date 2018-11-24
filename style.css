@@ -1381,7 +1381,8 @@ form.searchform:after {
 }
 
 .header-r span.toggle-btn {
-  display: inline-block;
+  /*display: inline-block;*/
+  display: none;
   vertical-align: middle;
   width: 50px;
   text-align: center;
@@ -4239,10 +4240,25 @@ ARCHIVE CATEGORY AND AUTHOR PAGE
 /*==============================
 RESPONSIVE STYLESHEET
 ==============================*/
-@media screen and (max-width: 1415px) {
-  .site-header .tc-wrapper,
+@media screen and (max-width: 1220px) {
+
+  /* Switch to single column layout */
+  body.custom-background #page {
+    grid-template-columns: 1fr 0;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 25px 0px;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  #sidenav {
+    display: none;
+  }
+  .header-r span.toggle-btn {
+    display: inline-block;
+  }
+
+
   section.gallery-section.style1 .tc-wrapper,
-  .site-footer .tc-wrapper,
   .single-post.full-width figure.post-thumbnail,
   .centered figure.post-thumbnail {
     width: 100%;
@@ -4250,6 +4266,25 @@ RESPONSIVE STYLESHEET
 
   .site-header .menu-wrap {
     width: 40%;
+  }
+
+  .custom-background .woocommerce-store-notice,
+  .custom-background p.demo_store {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .tc-wrapper,
+  .left-content .gallery-section .filter-button-group,
+  .gallery-section.style3 .filter-button-group,
+  .gal-carousel.full-width .page-description + .tc-wrapper .filter-button-group,
+  .single-post.full-width header.entry-header,
+  .centered header.entry-header {
+    width: 100%;
+  }
+
+  section[class*="-section"] .widget_raratheme_companion_cta_widget .raratheme-cta-container {
+    width: 100%;
   }
 
   /*=======================
@@ -4268,29 +4303,6 @@ RESPONSIVE STYLESHEET
   .widget_rrtc_description_widget .rtc-team-holder-modal .image-holder {
     left: 3%;
     width: 35%;
-  }
-
-}
-
-@media screen and (max-width: 1220px) {
-  body.custom-background #page,
-  .custom-background .woocommerce-store-notice,
-  .custom-background p.demo_store {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-
-  .tc-wrapper,
-  .left-content .gallery-section .filter-button-group,
-  .gallery-section.style3 .filter-button-group,
-  .gal-carousel.full-width .page-description + .tc-wrapper .filter-button-group,
-  .single-post.full-width header.entry-header,
-  .centered header.entry-header {
-    width: 100%;
-  }
-
-  section[class*="-section"] .widget_raratheme_companion_cta_widget .raratheme-cta-container {
-    width: 100%;
   }
 }
 
