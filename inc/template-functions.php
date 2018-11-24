@@ -660,22 +660,6 @@ function perfect_portfolio_footer_start(){
 endif;
 add_action( 'perfect_portfolio_footer', 'perfect_portfolio_footer_start', 20 );
 
-if( ! function_exists( 'perfect_portfolio_footer_top' ) ) :
-/**
- * Footer Top
-*/
-function perfect_portfolio_footer_top(){
-    ?>
-    <div class="top-footer clearfix">
-        <div class="tc-wrapper">
-            <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
-        </div>
-    </div>
-    <?php
-}
-endif;
-add_action( 'perfect_portfolio_footer', 'perfect_portfolio_footer_top', 30 );
-
 if( ! function_exists( 'perfect_portfolio_footer_bottom' ) ) :
 /**
  * Footer Bottom

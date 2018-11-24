@@ -1671,8 +1671,7 @@ ABOUT SECTION
   flex: 1;
   flex-direction: column;
 }
-#secondary .widget_rrtc_icon_text_widget .rtc-itw-inner-holder,
-.top-footer .widget_rrtc_icon_text_widget .rtc-itw-inner-holder {
+#secondary .widget_rrtc_icon_text_widget .rtc-itw-inner-holder {
   text-align: center;
 }
 .widget_rrtc_icon_text_widget .text-holder {
@@ -1701,7 +1700,6 @@ ABOUT SECTION
 .centered-content .widget_rrtc_icon_text_widget .icon-holder {
   margin: 0 auto 30px auto;
 }
-.top-footer .widget.widget_rrtc_icon_text_widget .widget-title,
 #secondary .widget.widget_rrtc_icon_text_widget .widget-title {
   font-size: 1.3em;
   font-weight: 500;
@@ -1711,7 +1709,6 @@ ABOUT SECTION
   font-size: 1.2em;
   color: #676767;
 }
-.top-footer .widget_rrtc_icon_text_widget .text-holder .content,
 #secondary .widget_rrtc_icon_text_widget .text-holder .content {
   font-size: 1em;
 }
@@ -2280,8 +2277,7 @@ section[class*="-section"] .widget_raratheme_companion_cta_widget .raratheme-cta
   margin-left: auto;
   margin-right: auto;
 }
-.widget-area .widget_raratheme_companion_cta_widget .widget-title,
-.top-footer .widget_raratheme_companion_cta_widget .widget-title {
+.widget-area .widget_raratheme_companion_cta_widget .widget-title {
   color: #fff;
 }
 .v-center-inner {
@@ -2934,10 +2930,6 @@ RARATHEME TESTIMONIAL WIDGET
   left: 54px;
 }
 
-.top-footer .widget_rrtc_testimonial_widget .testimonial-content::after {
-  border-bottom-color: #f8f8f8;
-}
-
 /*============================
 RARATHEME CATEGORY SLIDER
 ===========================*/
@@ -3012,21 +3004,6 @@ FOOTER SECTION
   grid-row: 3 / span 1;
 }
 
-.top-footer {
-  background: #f8f8f8;
-}
-.top-footer > .tc-wrapper {
-  text-align: left;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-.top-footer > .tc-wrapper:before,
-.top-footer > .tc-wrapper:after {
-  display: none;
-}
-.top-footer a {
-  color: #1c1b1b;
-}
 .menu-footer-container {
   text-align: center
 }
@@ -4389,14 +4366,6 @@ RESPONSIVE STYLESHEET
     padding-left: 20px;
     padding-right: 20px;
   }
-
-  /*========================
-  FOOTER SECTION
-  ========================*/
-  .top-footer > .tc-wrapper {
-    grid-gap: 20px;
-  }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -4796,18 +4765,6 @@ RESPONSIVE STYLESHEET
     font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-
-  /*=======================
-  FOOTER SECTION
-  =======================*/
-  .top-footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .top-footer > .tc-wrapper {
-    grid-gap: 50px;
-    grid-template-columns: repeat(1, 1fr);
   }
 
   /*==========================
