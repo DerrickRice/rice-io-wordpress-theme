@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.6
+Version: 1.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -865,19 +865,27 @@ img.custom-logo {
 /*=============================
 COMMON CSS
 =============================*/
-.site-content {
-  margin-bottom: 2em;
-}
 body.custom-background #page {
   background: #fff;
   width: 1500px;
   max-width: 95%;
   margin: 0 auto;
   padding-left: 25px;
-  padding-right: 25px;
+  padding-right: 0;
   box-shadow: 0 0 20px rgba(0,0,0,0.15);
   display: grid;
   grid-template-columns: 1fr 20em;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 25px;
+}
+.site-content {
+  margin-bottom: 2em;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+}
+#sidenav {
+  grid-column: 2 / span 1;
+  grid-row: 1 / -1;
 }
 .custom-background .woocommerce-store-notice,
 .custom-background p.demo_store {
@@ -1191,7 +1199,8 @@ SITE HEADER
 header.site-header {
   padding: 50px 0;
   margin: 0;
-  grid-column: span 2;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
 }
 .site-header .tc-wrapper {
   position: relative;
@@ -1641,9 +1650,6 @@ ul.social-icons {
 /*===========================
 ABOUT SECTION
 ===========================*/
-section.about-section {
-  margin-bottom: 60px;
-}
 .left-content .about-section .widget {
   margin-top: 60px;
 }
@@ -3002,7 +3008,8 @@ FOOTER SECTION
 ================================*/
 
 .site-footer {
-  grid-column: span 2;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
 }
 
 .top-footer {
@@ -3575,9 +3582,6 @@ RELATED POST SECTION
 /*============================
 SINGLE POST PAGE
 ============================*/
-.single-post .site-content {
-  margin-bottom: 80px;
-}
 .single-post.full-width figure.post-thumbnail,
 .centered figure.post-thumbnail,
 .page.full-width:not(.home) figure.post-thumbnail {

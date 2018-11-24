@@ -6,7 +6,7 @@
  */
 
 if ( is_active_sidebar( 'about' ) ) { ?>
-	<section id="about_section" class="about-section">
+	<section id="about_section" class="about-section site-content">
 		<div class="tc-wrapper">
 			<?php dynamic_sidebar( 'about' ); ?>
 		</div>
