@@ -5,11 +5,11 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.1
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
-Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-menu, custom-logo, featured-images, threaded-comments, full-width-template, rtl-language-support, translation-ready, theme-options, e-commerce, portfolio
+Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-menu, custom-logo, featured-images, full-width-template, rtl-language-support, translation-ready, theme-options, e-commerce, portfolio
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -558,14 +558,12 @@ a:hover, a:focus, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
+.site-main .posts-navigation,
+.site-main .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
 
-.comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
@@ -573,7 +571,6 @@ a:hover, a:focus, a:active {
   text-align: left;
 }
 
-.comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
   float: right;
@@ -656,8 +653,6 @@ a:hover, a:focus, a:active {
 .clearfix:after,
 .entry-content:before,
 .entry-content:after,
-.comment-content:before,
-.comment-content:after,
 .site-content:before,
 .site-content:after,
 .tc-wrapper:before,
@@ -669,7 +664,6 @@ a:hover, a:focus, a:active {
 
 .clearfix:after,
 .entry-content:after,
-.comment-content:after,
 .site-content:after,
 .tc-wrapper:after {
   clear: both;
@@ -719,13 +713,6 @@ a:hover, a:focus, a:active {
   margin: 0 0 1.5em;
 }
 
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word;
-}
-
 .bypostauthor {
   display: block;
 }
@@ -749,8 +736,7 @@ a:hover, a:focus, a:active {
 # Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
+.entry-content .wp-smiley {
   border: none;
   margin-bottom: 0;
   margin-top: 0;
@@ -1035,194 +1021,12 @@ span.separator {
 }
 
 /*========================
-COMMENTS AREA
+COMMENTS - there are none.
 ========================*/
-.comments-area {
-  text-align: left;
-}
-.single-post.full-width:not(.single-centered) .comments-area {
-  width: 65%;
-  margin: 0 auto;
-}
-.comments-area .comments-title,
-.comment-respond .comment-reply-title {
-  margin-top: 0;
-  margin-bottom: 40px;
-  font-size: 1.5em;
-  font-weight: 500;
-}
-.comments-area.full-width .comments-title {
-  text-align: center;
-}
-.comments-area ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.comments-area ol.comment-list {
-  padding-bottom: 60px;
-  border-bottom: 1px solid #e5e5e5;
-}
-.comments-area ol li ol {
-  margin-left: 100px;
-}
-.comments-area .comment-body {
-  position: relative;
-  padding-left: 90px;
-  border-top: 1px solid #e5e5e5;
-  padding-top: 30px;
-  margin-top: 30px;
-}
-.comments-area ol.comment-list > li:first-child > .comment-body {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
-}
-.comment-body img.avatar {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-}
-.comments-area ol.comment-list > li:first-child > .comment-body img.avatar {
-  top: 0;
-}
-.comment-body b.fn {
-  font-weight: 600;
-  font-size: 18px;
-  margin-bottom: 0;
-  display: block;
-  text-transform: capitalize;
-}
-.comment-body span.says {
+.comments-area,
+.comment-content,
+.comment-holder {
   display: none;
-}
-.comment-body .comment-metadata {
-  font-size: 14px;
-  color: #676767;
-  font-weight: 300;
-}
-.comment-body .comment-awaiting-moderation {
-  font-size: 14px;
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: #05d584;
-}
-.comment-body .reply {
-  position: absolute;
-  top: 30px;
-  right: 0;
-}
-.comment-body .reply .comment-reply-link {
-  display: inline-block;
-  text-align: center;
-  position: relative;
-  vertical-align: top;
-  font-size: 16px;
-  padding-left: 25px;
-}
-.comment-body .reply .comment-reply-link:hover {
-  color: #05d584;
-}
-.comment-body .reply .comment-reply-link:before {
-  content: "\f112";
-  font-family: FontAwesome;
-  font-size: 14px;
-  position: absolute;
-  top: 3px;
-  left: 0;
-}
-.comment-body .comment-content {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.7;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.comments-area ol li:last-child .comment-content p:last-child {
-  margin-bottom: 0;
-}
-.comment-respond {
-  margin-top: 40px;
-  text-align: center;
-}
-.leftsidebar .comment-respond,
-.rightsidebar .comment-respond {
-  text-align: left;
-}
-.comment-respond .comment-reply-title {
-  margin-bottom: 0;
-  vertical-align: middle;
-}
-.comment-respond .comment-reply-title a {
-  display: inline-block;
-  font-size: 14px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  background: #1c1b1b;
-  color: #fff;
-  padding: 8px 25px;
-  line-height: 25px;
-  border-radius: 40px;
-  vertical-align: middle;
-  text-transform: capitalize;
-  font-weight: 500;
-}
-.comment-respond .comment-reply-title a:hover {
-  background: #05d584;
-}
-.comment-form p.comment-notes {
-  font-weight: 400;
-  color: #676767;
-  margin: 10px 0 15px 0;
-  font-size: 16px;
-}
-.comment-respond p.comment-form-author,
-.comment-respond p.comment-form-email {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 3%;
-  width: 48%;
-  margin-bottom: 10px;
-}
-.comment-respond p.comment-form-email {
-  margin-right: 0;
-}
-p.comment-form-comment {
-  margin-bottom: 10px;
-}
-.comment-respond .comment-form label {
-  display: none;
-}
-.comment-respond .comment-form label[for="wp-comment-cookies-consent"] {
-  display: inline-block;
-  padding-left: 10px;
-  font-size: 16px;
-  color: #676767;
-  vertical-align: text-top;
-}
-.comment-respond .comment-form label[for="wp-comment-cookies-consent"]:hover {
-  text-decoration: underline;
-  color: #1c1b1b;
-}
-.comment-respond .comment-form input[type="text"],
-.comment-respond .comment-form input[type="email"],
-.comment-respond .comment-form input[type="url"],
-.comment-respond .comment-form textarea {
-  border-radius: 0;
-  height: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-color: #e5e5e5;
-}
-.comment-respond .comment-form textarea {
-  height: 110px;
-}
-.comment-form p.form-submit {
-  margin-bottom: 0;
-  margin-top: 30px;
 }
 
 /*========================
@@ -1406,10 +1210,9 @@ header.site-header {
   padding-top: 50px;
   margin-bottom: 50px;
 }
-.site-header .tc-wrapper,
-section.gallery-section.style1 .tc-wrapper,
-.site-footer .tc-wrapper {
+.site-header .tc-wrapper {
   width: 1400px;
+  position: relative;
 }
 .site-header .site-branding {
   display: inline-block;
@@ -1447,8 +1250,10 @@ section.gallery-section.style1 .tc-wrapper,
 }
 .site-header .header-r {
   display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
   vertical-align: middle;
-  width: 49%;
   text-align: right;
 }
 .header-r .cart {
@@ -1962,6 +1767,9 @@ section.about-section {
 /*========================
 GALLERY SECTION
 ========================*/
+section.gallery-section.style1 .tc-wrapper {
+  width: 1400px;
+}
 section.gallery-section {
   margin-bottom: 120px;
   text-align: center;
@@ -3211,6 +3019,10 @@ ul.social-networks {
 FOOTER SECTION
 ================================*/
 
+.site-footer .tc-wrapper {
+  width: 1400px;
+}
+
 .top-footer {
   background: #f8f8f8;
 }
@@ -3225,6 +3037,20 @@ FOOTER SECTION
 }
 .top-footer a {
   color: #1c1b1b;
+}
+.menu-footer-container {
+  text-align: center
+}
+#menu-footer {
+  padding-top: 0;
+  display: inline-block;
+}
+#menu-footer li {
+  display: inline-block;
+  margin-left: 1em;
+}
+#menu-footer li:first-child {
+  margin-left: 0;
 }
 
 
@@ -3691,11 +3517,6 @@ RELATED POST SECTION
   margin-top: 0;
 }
 .post-navigation + .additional-posts {
-  margin-top: 80px;
-}
-.full-width .comment-holder {
-  border-top: 1px solid #e5e5e5;
-  padding-top: 50px;
   margin-top: 80px;
 }
 .rightsidebar .additional-posts,
@@ -4660,9 +4481,6 @@ RESPONSIVE STYLESHEET
   .gallery-columns-9 .gallery-item {
     max-width: 18.33%;
   }
-  .comment-respond p.comment-form-author {
-    margin-right: 2%;
-  }
 
   /*=======================
   HEADER SECTION
@@ -5126,35 +4944,6 @@ RESPONSIVE STYLESHEET
   .single-post.full-width:not(.single-centered) .entry-footer .tags {
     width: 100%;
     text-align: center;
-  }
-
-  /*=======================
-  COMMENTS AREA
-  =======================*/
-  .single-post.full-width:not(.single-centered) .comments-area {
-    width: 100%;
-  }
-  .comments-area .comment-body {
-    padding-left: 50px;
-  }
-  .comment-body img.avatar {
-    width: 40px;
-    height: 40px;
-  }
-  .comment-body .reply {
-    position: static;
-    text-align: right;
-  }
-  .comments-area ol li ol {
-    margin-left: 20px;
-  }
-  .comment-respond {
-    padding-top: 50px;
-  }
-  .comment-respond p.comment-form-author,
-  .comment-respond p.comment-form-email {
-    width: 100%;
-    margin-right: 0;
   }
 
   /*========================

@@ -655,7 +655,7 @@ if( ! function_exists( 'perfect_portfolio_footer_top' ) ) :
 */
 function perfect_portfolio_footer_top(){
     ?>
-    <div class="top-footer">
+    <div class="top-footer clearfix">
         <div class="tc-wrapper">
             <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
         </div>
@@ -677,9 +677,11 @@ function perfect_portfolio_footer_bottom(){ ?>
                     the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
                 }
                 perfect_portfolio_get_footer_copyright();
-                printf( esc_html__( '%1$sPerfect Portfolio%2$s by Rara Theme.', 'perfect-portfolio' ), '<a href="' . esc_url( 'https://raratheme.com/wordpress-themes/perfect-portfolio/' ) .'" rel="author" target="_blank">', '</a>' );
-
-                printf( esc_html__( ' Powered by %s', 'perfect-portfolio' ), '<a href="'. esc_url( __( 'https://wordpress.org/', 'perfect-portfolio' ) ) .'" target="_blank">WordPress</a> .' );
+                printf(
+                    esc_html__( 'Theme forked from %1$sPerfect Portfolio%2$s.', 'perfect-portfolio' ),
+                    '<a href="' . esc_url( 'https://raratheme.com/wordpress-themes/perfect-portfolio/' ) .'" rel="author" target="_blank">',
+                    '</a>'
+                );
             ?>
             </div>
             <div class="foot-social">
