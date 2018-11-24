@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.4
+Version: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -872,8 +872,11 @@ COMMON CSS
 }
 body.custom-background #page {
   background: #fff;
-  max-width: 1500px;
+  width: 1500px;
+  max-width: 95%;
   margin: 0 auto;
+  padding-left: 2em;
+  padding-right: 2em;
   box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 .custom-background .woocommerce-store-notice,
@@ -1186,11 +1189,12 @@ BACK TO TOP
 SITE HEADER
 ==========================*/
 header.site-header {
-  padding: 50px 2em 50px 2em;
+  padding: 50px 0;
   margin: 0;
 }
 .site-header .tc-wrapper {
   position: relative;
+  text-align: left;
 }
 .site-header .site-branding {
   display: inline-block;
@@ -4256,15 +4260,8 @@ RESPONSIVE STYLESHEET
   .single-post.full-width figure.post-thumbnail,
   .centered figure.post-thumbnail {
     width: 100%;
-    padding-left: 2%;
-    padding-right: 2%;
   }
 
-  body.custom-background #page,
-  .custom-background .woocommerce-store-notice,
-  .custom-background p.demo_store {
-    width: 1200px;
-  }
   .site-header .menu-wrap {
     width: 40%;
   }
@@ -4293,7 +4290,8 @@ RESPONSIVE STYLESHEET
   body.custom-background #page,
   .custom-background .woocommerce-store-notice,
   .custom-background p.demo_store {
-    width: 95%;
+    padding-left: 2%;
+    padding-right: 2%;
   }
 
   .tc-wrapper,
@@ -4303,8 +4301,6 @@ RESPONSIVE STYLESHEET
   .single-post.full-width header.entry-header,
   .centered header.entry-header {
     width: 100%;
-    padding-left: 2%;
-    padding-right: 2%;
   }
 
   section[class*="-section"] .widget_raratheme_companion_cta_widget .raratheme-cta-container {
