@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.9
+Version: 1.1.10
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -1205,35 +1205,37 @@ BACK TO TOP
 /*==========================
 SITE HEADER
 ==========================*/
-header.site-header {
+#site-header {
   padding: 50px 0;
   margin: 0;
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
-}
-.site-header .tc-wrapper {
+  display: block;
   position: relative;
   text-align: left;
 }
-.site-header .site-branding {
-  display: inline-block;
-  vertical-align: middle;
-  width: 50%;
+#site-header .site-branding {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  width: 100%;
   text-align: left;
 }
-.logo-text.site-branding .site-logo {
+#site-header .site-branding .site-logo {
+  grid-column-start: auto;
   display: inline-block;
-  vertical-align: middle;
-  width: 14%;
+  width: 5em;
+  height: auto;
 }
-.site-branding .site-logo + .site-title-wrap {
+#site-header .site-branding .site-title-wrap {
+  grid-column-start: auto;
   display: inline-block;
-  vertical-align: middle;
-  width: 35%;
-  padding-left: 20px;
-  line-height: 1.2;
+  max-width: 20ex;
 }
-.site-branding .site-title {
+
+/* Style of the title itself, which is sometimes an h1 and sometimes a p */
+.site-title {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.2;
@@ -1241,15 +1243,18 @@ header.site-header {
   margin-top: 0;
   margin-bottom: 0;
 }
-.site-branding .site-title a {
+.site-title a {
   color: #1c1b1b;
 }
-.site-branding .site-description {
+
+/* Also within site-title-wrap */
+.site-description {
   margin: 0;
   font-size: 14px;
   font-weight: 400;
 }
-.site-header .header-r {
+
+#site-header .header-r {
   display: inline-block;
   position: absolute;
   right: 0;
@@ -1423,7 +1428,7 @@ form.searchform:after {
   filter: alpha(opacity=100);
   visibility: visible;
 }
-.site-header .menu-wrap {
+#site-header .menu-wrap {
   position: fixed;
   background: #f8f8f8;
   top: 0;
@@ -1441,7 +1446,7 @@ form.searchform:after {
   -moz-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
-.menu-toggled .site-header .menu-wrap {
+.menu-toggled #site-header .menu-wrap {
   visibility: visible;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -4270,7 +4275,7 @@ RESPONSIVE STYLESHEET
     width: 100%;
   }
 
-  .site-header .menu-wrap {
+  #site-header .menu-wrap {
     width: 40%;
   }
 
@@ -4313,9 +4318,6 @@ RESPONSIVE STYLESHEET
 }
 
 @media screen and (max-width: 1180px) {
-  .site-branding .site-logo + .site-title-wrap {
-    width: 45%;
-  }
   .left-content .article-section a.btn-readmore {
     padding-right: 2%;
   }
@@ -4453,13 +4455,7 @@ RESPONSIVE STYLESHEET
   /*=======================
   HEADER SECTION
   =======================*/
-  .logo-text.site-branding .site-logo {
-    width: 25%;
-  }
-  .site-branding .site-logo + .site-title-wrap {
-    width: 65%;
-  }
-  .site-header .menu-wrap {
+  #site-header .menu-wrap {
     width: 50%;
     padding-right: 30px;
   }
@@ -4729,10 +4725,7 @@ RESPONSIVE STYLESHEET
   /*==========================
   HEADER SECTION
   ==========================*/
-  .site-header .site-branding {
-    width: 64%;
-  }
-  .site-header .menu-wrap {
+  #site-header .menu-wrap {
     width: 70%;
   }
   .main-navigation button.toggle-button {
@@ -4960,7 +4953,8 @@ RESPONSIVE STYLESHEET
 
 }
 
-@media screen and (max-width: 540px) {
+/* mobile device mode, basically */
+@media screen and (max-width: 450px) {
   .gallery-item {
     float: none;
   }
@@ -4985,14 +4979,30 @@ RESPONSIVE STYLESHEET
     margin-top: 10px;
   }
   /*========================
-  HEADER SECTION
+  HEADER SECTION (mobile version)
   ========================*/
-  header.site-header {
+  header#site-header {
     padding-top: 30px;
   }
-  .site-header .site-branding {
-    width: 67%;
+  #site-header .site-branding {
+    grid-template-columns: 1fr
+    grid-gap: 15px;
+    justify-items: center;
   }
+
+  .header-r .head-search-form {
+    width: 300px;
+    right: -155px;
+  }
+  .header-r .head-search-form::before,
+  .header-r .head-search-form::after {
+    left: 0;
+    right: 45px;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+  }
+
   .header-r .cart,
   .header-r .header-search,
   .header-r span.toggle-btn {
@@ -5004,7 +5014,7 @@ RESPONSIVE STYLESHEET
   .header-r .header-search > span.search-toggle-btn {
     line-height: 40px;
   }
-  .site-header .menu-wrap {
+  #site-header .menu-wrap {
     width: 90%;
     padding: 30px 10px 30px 30px;
   }
@@ -5173,27 +5183,7 @@ RESPONSIVE STYLESHEET
 
 }
 
-@media screen and (max-width: 540px) and (orientation: portrait) {
-  .site-header .site-branding {
-    width: 100%;
-    text-align: center;
-  }
-  .site-branding .site-logo + .site-title-wrap {
-    width: 100%;
-    padding-left: 0;
-    margin-top: 15px;
-  }
-  .header-r .head-search-form {
-    width: 300px;
-    right: -155px;
-  }
-  .header-r .head-search-form::before,
-  .header-r .head-search-form::after {
-    left: 0;
-    right: 45px;
-    width: 0;
-    height: 0;
-    margin: 0 auto;
-  }
+/* Mobile device mode */
+@media screen and (max-width: 450px) and (orientation: portrait) {
 
 }

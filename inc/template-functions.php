@@ -64,71 +64,69 @@ function perfect_portfolio_header(){
     }else{
         $add_class = '';
     } ?>
-    <header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
-        <div class="tc-wrapper">
-            <?php if( has_custom_logo() || $site_title || $description ) : ?>
+    <header id="site-header"  itemscope itemtype="http://schema.org/WPHeader">
+        <?php if( has_custom_logo() || $site_title || $description ) : ?>
 
-                <div class="site-branding<?php echo esc_attr( $add_class ); ?>" itemscope itemtype="http://schema.org/Organization">
-                    <?php if( has_custom_logo() ) : ?>
-                        <div class="site-logo">
-                            <?php the_custom_logo(); ?>
-                        </div>
-                    <?php endif; ?>
-                    <?php if( $site_title || $description ) { ?>
-                        <div class="site-title-wrap">
-                            <?php if( $site_title ) : ?>
-                                <?php if ( is_front_page() ) : ?>
-                                    <h1 class="site-title" itemprop="name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-                                <?php else : ?>
-                                    <p class="site-title" itemprop="name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><?php bloginfo( 'name' ); ?></a></p>
-                                <?php endif;
-                            endif;
-                            if( $description || is_customize_preview() ) : ?>
-                                <p class="site-description" itemprop="description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-                            <?php endif; ?>
-                        </div>
-                    <?php } ?>
-                </div><!-- .site-branding -->
-            <?php endif; ?>
-            <div class="header-r">
-                <?php if( perfect_portfolio_is_woocommerce_activated() && $ed_cart ) perfect_portfolio_wc_cart_count(); ?>
-                <?php if( $ed_header_search ) : ?>
-                <div class="header-search">
-                    <span class="search-toggle-btn"><i class="fa fa-search"></i></span>
-                    <div class="head-search-form">
-                        <?php get_search_form(); ?>
+            <div class="site-branding<?php echo esc_attr( $add_class ); ?>" itemscope itemtype="http://schema.org/Organization">
+                <?php if( has_custom_logo() ) : ?>
+                    <div class="site-logo">
+                        <?php the_custom_logo(); ?>
                     </div>
-                </div>
                 <?php endif; ?>
-                <span class="toggle-btn"><i class="fa fa-bars"></i></span>
-                <div class="menu-wrap">
-                    <nav id="site-navigation" class="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        <button type="button" class="toggle-button">
-                            <span class="toggle-bar"></span>
-                            <span class="toggle-bar"></span>
-                            <span class="toggle-bar"></span>
-                        </button>
-                        <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'primary',
-                                'menu_id'        => 'primary-menu',
-                                'menu_class'     => 'nav-menu',
-                                'container'      => false,
-                                'fallback_cb'    => 'perfect_portfolio_primary_menu_fallback',
-                            ) );
-                        ?>
-                    </nav><!-- #site-navigation -->
-                    <div class="menu-search">
-                        <?php get_search_form(); ?>
+                <?php if( $site_title || $description ) { ?>
+                    <div class="site-title-wrap">
+                        <?php if( $site_title ) : ?>
+                            <?php if ( is_front_page() ) : ?>
+                                <h1 class="site-title" itemprop="name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+                            <?php else : ?>
+                                <p class="site-title" itemprop="name"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" itemprop="url"><?php bloginfo( 'name' ); ?></a></p>
+                            <?php endif;
+                        endif;
+                        if( $description || is_customize_preview() ) : ?>
+                            <p class="site-description" itemprop="description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+                        <?php endif; ?>
                     </div>
-                    <?php if( !empty( $menu_description ) ) : ?>
-                        <div class="menu-text">
-                            <?php echo wpautop( wp_kses_post( $menu_description ) ); ?>
-                        </div>
-                    <?php endif; ?>
-                    <div class="menu-social">
-                        <?php perfect_portfolio_social_links(); ?>
+                <?php } ?>
+            </div><!-- .site-branding -->
+        <?php endif; ?>
+        <div class="header-r">
+            <?php if( perfect_portfolio_is_woocommerce_activated() && $ed_cart ) perfect_portfolio_wc_cart_count(); ?>
+            <?php if( $ed_header_search ) : ?>
+            <div class="header-search">
+                <span class="search-toggle-btn"><i class="fa fa-search"></i></span>
+                <div class="head-search-form">
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
+            <?php endif; ?>
+            <span class="toggle-btn"><i class="fa fa-bars"></i></span>
+            <div class="menu-wrap">
+                <nav id="site-navigation" class="main-navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <button type="button" class="toggle-button">
+                        <span class="toggle-bar"></span>
+                        <span class="toggle-bar"></span>
+                        <span class="toggle-bar"></span>
+                    </button>
+                    <?php
+                        wp_nav_menu( array(
+                            'theme_location' => 'primary',
+                            'menu_id'        => 'primary-menu',
+                            'menu_class'     => 'nav-menu',
+                            'container'      => false,
+                            'fallback_cb'    => 'perfect_portfolio_primary_menu_fallback',
+                        ) );
+                    ?>
+                </nav><!-- #site-navigation -->
+                <div class="menu-search">
+                    <?php get_search_form(); ?>
+                </div>
+                <?php if( !empty( $menu_description ) ) : ?>
+                    <div class="menu-text">
+                        <?php echo wpautop( wp_kses_post( $menu_description ) ); ?>
                     </div>
+                <?php endif; ?>
+                <div class="menu-social">
+                    <?php perfect_portfolio_social_links(); ?>
                 </div>
             </div>
         </div>
