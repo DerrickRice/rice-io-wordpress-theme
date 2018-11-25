@@ -874,7 +874,7 @@ body.custom-background #page {
   padding-right: 0;
   box-shadow: 0 0 20px rgba(0,0,0,0.15);
   display: grid;
-  grid-template-columns: 1fr 20em;
+  grid-template-columns: 1fr 30ex;
   grid-template-rows: repeat(3, auto);
   grid-gap: 25px;
 }
@@ -889,6 +889,12 @@ body.custom-background #page {
   background-color: #f8f8f8;
   padding-top: 50px;
   padding-right: 25px;
+  padding-left: 10px;
+}
+#sidenav .nav-menu {
+  list-style-type: none;
+  text-align: right;
+  padding: 0;
 }
 .custom-background .woocommerce-store-notice,
 .custom-background p.demo_store {
