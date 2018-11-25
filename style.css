@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.10
+Version: 1.1.11
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -1206,8 +1206,8 @@ BACK TO TOP
 SITE HEADER
 ==========================*/
 #site-header {
-  padding: 50px 0;
-  margin: 0;
+  margin: 4ex 0;
+  padding: 0;
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
   display: block;
@@ -1231,7 +1231,7 @@ SITE HEADER
 #site-header .site-branding .site-title-wrap {
   grid-column-start: auto;
   display: inline-block;
-  max-width: 20ex;
+  max-width: 22ex;
 }
 
 /* Style of the title itself, which is sometimes an h1 and sometimes a p */
@@ -1254,6 +1254,9 @@ SITE HEADER
   font-weight: 400;
 }
 
+/*==========================
+SITE HEADER > Menu & Menu Button
+==========================*/
 #site-header .header-r {
   display: inline-block;
   position: absolute;
@@ -4985,9 +4988,10 @@ RESPONSIVE STYLESHEET
     padding-top: 30px;
   }
   #site-header .site-branding {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
     grid-gap: 15px;
     justify-items: center;
+    text-align: center;
   }
 
   .header-r .head-search-form {
