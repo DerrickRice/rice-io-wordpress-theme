@@ -1265,39 +1265,6 @@ SITE HEADER > Menu & Menu Button
   vertical-align: middle;
   text-align: right;
 }
-.header-r .cart {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  background: #f5f5f5;
-  border-radius: 100%;
-  position: relative;
-  color: #1c1b1b;
-}
-.header-r .cart:hover {
-  background: #1c1b1b;
-  color: #fff;
-}
-.header-r .cart .number {
-  position: absolute;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 13px;
-  background: #000;
-  color: #fff;
-  border-radius: 100%;
-  transition: all ease 0.3s;
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s;
-}
-.header-r .cart:hover .number {
-  background: #f5f5f5;
-  color: #000;
-}
 .header-r .header-search {
   display: inline-block;
   vertical-align: middle;
@@ -5007,7 +4974,6 @@ RESPONSIVE STYLESHEET
     margin: 0 auto;
   }
 
-  .header-r .cart,
   .header-r .header-search,
   .header-r span.toggle-btn {
     width: 40px;
