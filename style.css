@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.12
+Version: 1.1.13
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -1403,16 +1403,16 @@ form.searchform:after {
   visibility: visible;
 }
 
-#site-header .menu-wrap {
+#header-r .menu-wrap {
   position: fixed;
   background: #f8f8f8;
   top: 0;
   right: 0;
   width: 25%;
-  padding: 50px;
   text-align: left;
   height: 100%;
   z-index: 99999;
+  padding: 4ex;
   visibility: hidden;
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
@@ -1421,21 +1421,21 @@ form.searchform:after {
   -moz-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
-.menu-toggled #site-header .menu-wrap {
+.menu-toggled #header-r .menu-wrap {
   visibility: visible;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   transform: translateX(0);
 }
-.menu-wrap nav.main-navigation {
-  margin-bottom: 40px;
+
+#site-navigation {
+  width: 100%
 }
-body:not(.admin-bar) .menu-wrap nav.main-navigation {
-  display: table;
-  clear: both;
-  width: 100%;
-}
-.main-navigation button.toggle-button {
+
+/*==========================
+SITE HEADER > Menu > Menu Button {{{
+==========================*/
+#site-navigation button.toggle-button {
   width: 60px;
   height: 60px;
   border-radius: 100%;
@@ -1444,10 +1444,10 @@ body:not(.admin-bar) .menu-wrap nav.main-navigation {
   border: none;
   float: right;
 }
-.main-navigation button.toggle-button:hover {
+#site-navigation button.toggle-button:hover {
   background: none;
 }
-.main-navigation button.toggle-button .toggle-bar {
+#site-navigation button.toggle-button .toggle-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -1461,75 +1461,61 @@ body:not(.admin-bar) .menu-wrap nav.main-navigation {
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.main-navigation button.toggle-button .toggle-bar:nth-child(2) {
+#site-navigation button.toggle-button .toggle-bar:nth-child(2) {
   display: none;
 }
-.main-navigation button.toggle-button .toggle-bar:nth-child(3) {
+#site-navigation button.toggle-button .toggle-bar:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.main-navigation button.toggle-button:hover .toggle-bar {
+#site-navigation button.toggle-button:hover .toggle-bar {
   background: #f0474a;
 }
-ul.menu {
+/* }}} */
+
+/*==========================
+SITE HEADER > Menu > List {{{
+==========================*/
+
+/* ul#slider-menu */
+#slider-menu {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: left;
 }
-ul.menu:not(.nav-menu) {
-  display: table;
-  clear: both;
-  padding-top: 20px;
-}
-.main-navigation ul.nav-menu {
-  display: table;
-  clear: both;
-  padding-top: 20px;
-  width: 100%;
-}
-.main-navigation .nav-menu li {
-  display: block;
+#slider-menu li {
   font-weight: 500;
-  text-transform: capitalize;
   font-size: 24px;
-  position: relative;
-}
-.main-navigation .nav-menu li a {
-  display: block;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+#slider-menu a {
   color: #1c1b1b;
 }
-.main-navigation .nav-menu li:hover > a,
-.main-navigation .nav-menu li.current-menu-item > a,
-.main-navigation .nav-menu li.current_page_item > a {
-  color: #365899;
+#slider-menu a:hover {
+  color: none;
 }
-.main-navigation .nav-menu li ul {
-  margin-left: 15px;
-  padding-left: 0;
+#slider-menu li.current-menu-item,
+#slider-menu li.current_page_item {
+  /* DRICE todo */
+  color: red;
 }
-.main-navigation .nav-menu li ul li {
-  font-size: 20px;
+
+/* sub menus */
+#slider-menu ul {
+  margin: 0 0 0 15px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
 }
-.main-navigation ul li span {
-  position: absolute;
-  top: 15px;
-  right: 0;
-  display: inline-block;
-  width: 35px;
-  text-align: center;
-  height: 35px;
-  line-height: 35px;
-  font-size: 20px;
-  font-weight: 700;
-  cursor: pointer;
-  z-index: 1;
+#slider-menu ul li {
+  font-size: 80%; /* 24 px -> 20 px */
 }
-.main-navigation ul li span:hover {
-  background: #eee;
-}
+
+/* }}} */
+
 .menu-wrap .menu-search {
   display: none;
   margin-bottom: 50px;
@@ -4703,14 +4689,14 @@ RESPONSIVE STYLESHEET
   #site-header .menu-wrap {
     width: 70%;
   }
-  .main-navigation button.toggle-button {
+  #site-navigation button.toggle-button {
     width: 40px;
     height: 40px;
   }
-  .main-navigation .nav-menu li {
+  #site-navigation .nav-menu li {
     font-size: 18px;
   }
-  .main-navigation .nav-menu li ul li {
+  #site-navigation .nav-menu li ul li {
     font-size: 16px;
   }
   .social-icons li {
@@ -4956,9 +4942,6 @@ RESPONSIVE STYLESHEET
   /*========================
   HEADER SECTION (mobile version)
   ========================*/
-  header#site-header {
-    padding-top: 30px;
-  }
   #site-header .site-branding {
     grid-template-columns: 1fr;
     grid-gap: 15px;

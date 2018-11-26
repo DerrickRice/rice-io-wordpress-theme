@@ -110,7 +110,7 @@ function perfect_portfolio_header(){
                     <?php
                         wp_nav_menu( array(
                             'theme_location' => 'primary',
-                            'menu_id'        => 'primary-menu',
+                            'menu_id'        => 'slider-menu',
                             'menu_class'     => 'nav-menu',
                             'container'      => false,
                             'fallback_cb'    => 'perfect_portfolio_primary_menu_fallback',
