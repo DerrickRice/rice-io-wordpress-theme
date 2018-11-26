@@ -1257,7 +1257,7 @@ SITE HEADER
 /*==========================
 SITE HEADER > Menu & Menu Button
 ==========================*/
-#site-header .header-r {
+#header-r {
   display: inline-block;
   position: absolute;
   right: 0;
@@ -1265,7 +1265,9 @@ SITE HEADER > Menu & Menu Button
   vertical-align: middle;
   text-align: right;
 }
-.header-r .header-search {
+
+/* SITE HEADER > search field in menu {{{ */
+#header-r .header-search {
   display: inline-block;
   vertical-align: middle;
   width: 50px;
@@ -1277,18 +1279,18 @@ SITE HEADER > Menu & Menu Button
   background: #f5f5f5;
   margin-left: 10px;
 }
-.header-r .header-search > span.search-toggle-btn {
+#header-r .header-search > span.search-toggle-btn {
   display: block;
   height: 100%;
   line-height: 50px;
   cursor: pointer;
   border-radius: 100%;
 }
-.header-r .header-search > span.search-toggle-btn:hover {
+#header-r .header-search > span.search-toggle-btn:hover {
   background: #1c1b1b;
   color: #fff;
 }
-.header-r .head-search-form {
+#header-r .head-search-form {
   position: absolute;
   top: 100%;
   background: #f5f5f5;
@@ -1300,8 +1302,8 @@ SITE HEADER > Menu & Menu Button
   z-index: 999;
   display: none;
 }
-.header-r .head-search-form:before,
-.header-r .head-search-form:after {
+#header-r .head-search-form:before,
+#header-r .head-search-form:after {
   content: "";
   border-bottom: 10px solid #f5f5f5;
   border-left: 10px solid transparent;
@@ -1310,7 +1312,7 @@ SITE HEADER > Menu & Menu Button
   top: -10px;
   right: 35px;
 }
-.header-r .head-search-form:before {
+#header-r .head-search-form:before {
   border-bottom-color: #e5e5e5;
   top: -11px;
 }
@@ -1355,13 +1357,14 @@ form.searchform:after {
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-
 .searchform input[type="submit"]:hover {
   opacity: 1;
   filter: alpha(opacity=100);
 }
+/* }}} */
 
-.header-r span.toggle-btn {
+/* The menu button */
+#header-r span.toggle-btn {
   /*display: inline-block;*/
   display: none;
   vertical-align: middle;
@@ -1374,10 +1377,11 @@ form.searchform:after {
   font-size: 21px;
   cursor: pointer;
 }
-.header-r span.toggle-btn:hover {
+#header-r span.toggle-btn:hover {
   background: #1c1b1b;
   color: #fff;
 }
+
 .site:after {
   content: "";
   position: absolute;
@@ -1398,6 +1402,7 @@ form.searchform:after {
   filter: alpha(opacity=100);
   visibility: visible;
 }
+
 #site-header .menu-wrap {
   position: fixed;
   background: #f8f8f8;
@@ -4234,7 +4239,7 @@ RESPONSIVE STYLESHEET
   #sidenav {
     display: none;
   }
-  .header-r span.toggle-btn {
+  #header-r span.toggle-btn {
     display: inline-block;
   }
 
@@ -4961,12 +4966,12 @@ RESPONSIVE STYLESHEET
     text-align: center;
   }
 
-  .header-r .head-search-form {
+  #header-r .head-search-form {
     width: 300px;
     right: -155px;
   }
-  .header-r .head-search-form::before,
-  .header-r .head-search-form::after {
+  #header-r .head-search-form::before,
+  #header-r .head-search-form::after {
     left: 0;
     right: 45px;
     width: 0;
@@ -4974,14 +4979,14 @@ RESPONSIVE STYLESHEET
     margin: 0 auto;
   }
 
-  .header-r .header-search,
-  .header-r span.toggle-btn {
+  #header-r .header-search,
+  #header-r span.toggle-btn {
     width: 40px;
     height: 40px;
     line-height: 40px;
     font-size: 16px;
   }
-  .header-r .header-search > span.search-toggle-btn {
+  #header-r .header-search > span.search-toggle-btn {
     line-height: 40px;
   }
   #site-header .menu-wrap {

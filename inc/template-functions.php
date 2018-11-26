@@ -89,7 +89,7 @@ function perfect_portfolio_header(){
                 <?php } ?>
             </div><!-- .site-branding -->
         <?php endif; ?>
-        <div class="header-r">
+        <div id="header-r">
             <?php if( perfect_portfolio_is_woocommerce_activated() && $ed_cart ) perfect_portfolio_wc_cart_count(); ?>
             <?php if( $ed_header_search ) : ?>
             <div class="header-search">
