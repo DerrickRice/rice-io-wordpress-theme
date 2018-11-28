@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.1.16
+Version: 1.1.17
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -872,11 +872,12 @@ body.custom-background #page {
   padding-right: 0;
   box-shadow: 0 0 20px rgba(0,0,0,0.15);
   display: grid;
-  grid-template-columns: 1fr 30ex;
+  grid-template-columns: 1fr 40ex;
   grid-template-rows: repeat(3, auto);
   grid-gap: 25px;
 }
 .site-content {
+  font-size: 1.8rem;
   margin-bottom: 2em;
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
@@ -4304,9 +4305,6 @@ RESPONSIVE STYLESHEET
   .page-template-portfolio .gallery-wrap .text-holder-inner {
     padding: 20px;
   }
-  .text-holder .gal-title {
-    font-size: 1.25em;
-  }
 
 
   /*===========================
@@ -4471,7 +4469,6 @@ RESPONSIVE STYLESHEET
     padding-left: 50px;
     padding-right: 50px;
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -4483,54 +4480,45 @@ RESPONSIVE STYLESHEET
   .gallery-columns-9 .gallery-item {
     max-width: 32%;
   }
+}
 
-  /*.page-template-portfolio .gallery-wrap .text-holder {
-    padding-left: 20px;
-    padding-right: 20px;
-    }*/
+@media screen and (max-width: 640px) {
+  section.gallery-section,
+  section.cta-section,
+  section.article-section {
+    margin-bottom: 80px;
   }
-
-  @media screen and (max-width: 640px) {
-    section[class*="-section"] .widget-title,
-    .section-title, .page-header .page-title {
-      font-size: 1.75em;
-    }
-    section.gallery-section,
-    section.cta-section,
-    section.article-section {
-      margin-bottom: 80px;
-    }
-    .owl-theme .owl-nav [class*="owl-"] {
-      left: 10px;
-    }
-    .owl-theme .owl-nav .owl-next {
-      left: auto;
-      right: 10px;
-    }
-    blockquote {
-      margin-top: 40px;
-      margin-bottom: 40px;
-      padding-left: 25px;
-      padding-right: 25px;
-    }
-    .gallery {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
-    .gallery-columns-3 .gallery-item,
-    .gallery-columns-4 .gallery-item,
-    .gallery-columns-5 .gallery-item,
-    .gallery-columns-6 .gallery-item,
-    .gallery-columns-7 .gallery-item,
-    .gallery-columns-8 .gallery-item,
-    .gallery-columns-9 .gallery-item {
-      max-width: 49%;
-    }
-    button, input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-      letter-spacing: 1px;
-    }
+  .owl-theme .owl-nav [class*="owl-"] {
+    left: 10px;
+  }
+  .owl-theme .owl-nav .owl-next {
+    left: auto;
+    right: 10px;
+  }
+  blockquote {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .gallery {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .gallery-columns-3 .gallery-item,
+  .gallery-columns-4 .gallery-item,
+  .gallery-columns-5 .gallery-item,
+  .gallery-columns-6 .gallery-item,
+  .gallery-columns-7 .gallery-item,
+  .gallery-columns-8 .gallery-item,
+  .gallery-columns-9 .gallery-item {
+    max-width: 49%;
+  }
+  button, input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    letter-spacing: 1px;
+  }
 
   /*===========================
   BACK TO TOP
@@ -4539,7 +4527,6 @@ RESPONSIVE STYLESHEET
     width: 40px;
     height: 40px;
     line-height: 40px;
-    font-size: 1em;
   }
 
   /*==========================
@@ -4750,7 +4737,6 @@ RESPONSIVE STYLESHEET
   }
 
   .widget_rrtc_description_widget .rtc-team-holder-modal .social-profile li {
-    font-size: 0.7em;
     padding: 2px;
   }
 
@@ -4763,7 +4749,6 @@ RESPONSIVE STYLESHEET
   .widget_rrtc_description_widget .rtc-team-holder-modal .social-profile li a svg {
     line-height: 30px;
   }
-
 }
 
 /* mobile device mode, basically */
@@ -4820,13 +4805,6 @@ RESPONSIVE STYLESHEET
   #site-header .menu-wrap {
     width: 90%;
     padding: 30px 10px 30px 30px;
-  }
-
-  /*=============================
-  WIDGET RARATHEME ICON TEXT
-  =============================*/
-  .widget_rrtc_icon_text_widget .rtc-itw-inner-holder {
-    font-size: 1em;
   }
 
   /*========================
@@ -4983,10 +4961,5 @@ RESPONSIVE STYLESHEET
     padding-left: 0;
     margin-top: 20px;
   }
-
-}
-
-/* Mobile device mode */
-@media screen and (max-width: 450px) and (orientation: portrait) {
 
 }
