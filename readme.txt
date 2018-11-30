@@ -22,49 +22,49 @@ Perfect Portfolio is a clean, elegant and responsive WordPress theme dedicated f
 
 A. About Section
 
-	1. Go to Appearance> Customize>FrontPage Settings> About Section
-	2. To add featured page on frontpage Click on Add a Widget then select Rara:FeaturedPage Widget. Fill in the details.
-	3. Click Save & Publish.
+    1. Go to Appearance> Customize>FrontPage Settings> About Section
+    2. To add featured page on frontpage Click on Add a Widget then select Rara:FeaturedPage Widget. Fill in the details.
+    3. Click Save & Publish.
 
-	Note: For Featured Page section first activate RaraTheme Companion Plugin.
-	Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
+    Note: For Featured Page section first activate RaraTheme Companion Plugin.
+    Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
 
 B. Gallery Section
 
-	1. Go to Appearance> Customize>FrontPage Settings> Gallery Section  
-	2. Check Enable Gallery Section to display it in the Homepage.
-	3. You can set number of portfolio and set title fot vial  all button. 
-	4. Click Save and Publish.
+    1. Go to Appearance> Customize>FrontPage Settings> Gallery Section
+    2. Check Enable Gallery Section to display it in the Homepage.
+    3. You can set number of portfolio and set title fot vial  all button.
+    4. Click Save and Publish.
 
-	Note: For Service section first activate RaraTheme Companion Plugin.
-	Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
+    Note: For Service section first activate RaraTheme Companion Plugin.
+    Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
 
 C. Services Section
 
-	1. Go to Appearance> Customize>FrontPage Settings> Services Section  
-	2. To add title for service section Click on Add a Widget then select Text Widget and fill the details. 
-	3. Then Click on Add a Widget and select Rara:IconText Widget to get the content for this section. Fill in the details.
-	4. Click Save & Publish.
+    1. Go to Appearance> Customize>FrontPage Settings> Services Section
+    2. To add title for service section Click on Add a Widget then select Text Widget and fill the details.
+    3. Then Click on Add a Widget and select Rara:IconText Widget to get the content for this section. Fill in the details.
+    4. Click Save & Publish.
 
-	Note: For Service section first activate RaraTheme Companion Plugin.
-	Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
+    Note: For Service section first activate RaraTheme Companion Plugin.
+    Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
 
 D. Call to Action Section
 
-	1. Go to Appearance> Customize> FrontPage Settings> Call to Action Section 
-	2. To add call to action section on frontpage Click on Add a Widget then select Rara:CallToAction Widget. Fill in the details.
-	3. Click Save and Publish.
+    1. Go to Appearance> Customize> FrontPage Settings> Call to Action Section
+    2. To add call to action section on frontpage Click on Add a Widget then select Rara:CallToAction Widget. Fill in the details.
+    3. Click Save and Publish.
 
-  	Note: For Call to Action section first activate RaraTheme Companion Plugin.
-  	Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
+      Note: For Call to Action section first activate RaraTheme Companion Plugin.
+      Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
 
 E. Blog Section
 
-	1. Go to Appearance> Customize> FrontPage Settings> Blog Section 
-	2. This section will show three recent posts.
-	3. You can add title for this section.
-	4. Also you can enable/disable button on this section.
-	5. Click Save and Publish.
+    1. Go to Appearance> Customize> FrontPage Settings> Blog Section
+    2. This section will show three recent posts.
+    3. You can add title for this section.
+    4. Also you can enable/disable button on this section.
+    5. Click Save and Publish.
 
 == Copyright ==
 
@@ -88,7 +88,7 @@ License: GPLv3
 Source: https://isotope.metafizzy.co
 
 Imagesloaded,
-License: MIT 
+License: MIT
 Source: https://imagesloaded.desandro.com/
 
 perfect-scrollbar v1.3.0
@@ -120,17 +120,17 @@ https://pixabay.com/en/safety-mirror-wall-illusion-1209710/
 All other images including icon image and images used in customizer settings are self created and are under the GPL.
 
 == Changelog ==
-	1.0.3
-	* made support for font-awesome update 5.0
-	
-	1.0.2
-	* Fixed portfolio page responsive design issue
-	* Fixed search-form issue
-	* Removed imagesloaded js
-	
-	1.0.1
-	* Fixed button filter issue in portfolio template
-	* Changed responsive layout of content in portfolio template 
+    1.0.3
+    * made support for font-awesome update 5.0
+
+    1.0.2
+    * Fixed portfolio page responsive design issue
+    * Fixed search-form issue
+    * Removed imagesloaded js
+
+    1.0.1
+    * Fixed button filter issue in portfolio template
+    * Changed responsive layout of content in portfolio template
 
     1.0.0
     * Initial release
