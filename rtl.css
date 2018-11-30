@@ -89,10 +89,7 @@ body {
 .article-block header.entry-header, 
 .widget_raratheme_companion_faqs_widget .accordion li, 
 .bottom-footer, .article-wrap, .related .related-post-title, .additional-posts .block .block-title, 
-.single .page-header, .additional-posts.portfolio-related .block .entry-meta, 
-.gallery-section.style2 .text-holder, .grid-view .gallery-wrap .text-holder, 
-.gallery-section.style3 .text-holder, .gal-carousel .gallery-img .text-holder, 
-.gallery-section.style4 .gallery-wrap .gallery-img .text-holder, .list-view .gallery-wrap .gallery-img .text-holder, 
+.additional-posts.portfolio-related .block .entry-meta, 
 .widget_raratheme_featured_page_widget .widget-featured-holder, .block-wrap, 
 .full-width.single-post .additional-posts .entry-meta {
     text-align: right;
@@ -290,15 +287,6 @@ blockquote {
     border-right: 3px solid #f0f0f0;
 }
 
-.single span.sub-title span {
-    margin-right: 0;
-    margin-left: 25px;
-}
-
-.single span.sub-title span:last-child {
-    margin-left: 0;
-}
-
 .single-centered .additional-posts .block {
     text-align: right;
 }
@@ -322,14 +310,12 @@ blockquote {
     padding-right: 20px;
 }
 
-.text-holder span.sub-title span, 
-.filter-button-group button {
+.text-holder span.sub-title span {
     margin-right: 0;
     margin-left: 15px;
 }
 
-.text-holder span.sub-title span:last-child, 
-.filter-button-group button:last-child {
+.text-holder span.sub-title span:last-child {
     margin-right: 0;
     margin-left: 0;
 }

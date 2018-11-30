@@ -83,10 +83,6 @@ GNU General Public License for more details.
 
 Perfect Portfolio bundles the following third-party resources:
 
-Owl-carousel, Copyright 2013-2017 David Deutsch 
-License : MIT
-Source  : https://owlcarousel2.github.io/OwlCarousel2
-
 Isotope, Copyright 2017 Metafizzy,
 License: GPLv3
 Source: https://isotope.metafizzy.co

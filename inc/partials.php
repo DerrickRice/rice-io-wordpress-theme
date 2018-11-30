@@ -75,12 +75,3 @@ function perfect_portfolio_get_blog_view_all_btn(){
     return esc_html( get_theme_mod( 'blog_view_all', __( 'View All', 'perfect-portfolio' ) ) );    
 }
 endif;
-
-if( ! function_exists( 'perfect_portfolio_get_gallery_view_all_btn' ) ) :
-/**
- * Display gallery readmore button
-*/
-function perfect_portfolio_get_gallery_view_all_btn(){
-    return esc_html( get_theme_mod( 'gallery_view_all', __( 'View More', 'perfect-portfolio' ) ) );    
-}
-endif;

@@ -40,10 +40,6 @@ function scrollToSection( section_id ){
         preview_section_id = "about_section";
         break;
         
-        case 'accordion-section-gallery_section':
-        preview_section_id = "gallery_section";
-        break;
-
         case 'accordion-section-sidebar-widgets-cta':
         preview_section_id = "cta_section";
         break;

@@ -118,7 +118,7 @@ if( ! function_exists( 'perfect_portfolio_get_posts_list' ) ) :
 function perfect_portfolio_get_posts_list( $status ){
     global $post;
 
-    $post_type = ( $status == 'portfolio-related' ) ? 'rara-portfolio' : 'post';
+    $post_type = 'post';
     $ed_post_date  = get_theme_mod( 'ed_post_date', false );
     
     $args = array(
@@ -437,7 +437,6 @@ if( ! function_exists( 'perfect_portfolio_get_home_sections' ) ) :
 function perfect_portfolio_get_home_sections(){
     $sections = array( 
         'about'       => array( 'sidebar' => 'about' ),
-        'gallery'     => array( 'section' => 'gallery' ),
         'services'    => array( 'sidebar' => 'services' ),
         'cta'         => array( 'sidebar' => 'cta' ),
         'blog'        => array( 'section' => 'blog' ) 
@@ -482,116 +481,6 @@ function perfect_portfolio_is_rtc_activated(){
 function perfect_portfolio_is_woocommerce_activated() {
 	return class_exists( 'woocommerce' ) ? true : false;
 }
-
-
-if( ! function_exists( 'perfect_portfolio_get_portfolio_buttons' ) ) :
-/**
- * Query for Portfolio Buttons
-*/
-function perfect_portfolio_get_portfolio_buttons( $home = false ){
-    if( taxonomy_exists( 'rara_portfolio_categories' ) ){
-        if( $home ){
-            $no_of_portfolio = get_theme_mod( 'no_of_portfolio', 9 );
-            $s = '';
-            $i = 0;
-            $portfolio_posts = get_posts( array( 'post_type' => 'rara-portfolio', 'post_status' => 'publish', 'posts_per_page' => $no_of_portfolio ) );
-            foreach( $portfolio_posts as $portfolio ){
-                $terms = get_the_terms( $portfolio->ID, 'rara_portfolio_categories' );
-                if( $terms ){
-                    foreach( $terms as $term ){
-                        $i++;
-                        $s .= $term->term_id;
-                        $s .= ', ';    
-                    }
-                }
-            }
-            $term_ids = explode( ', ', $s );
-            $term_ids = array_diff( array_unique( $term_ids ), array('') );
-            wp_reset_postdata();//Reseting get_posts            
-        }
-        
-        $args = array(
-            'taxonomy'      => 'rara_portfolio_categories',
-            'orderby'       => 'name', 
-            'order'         => 'ASC',
-        );                
-        $terms = get_terms( $args );
-        if( $terms ){
-        ?>
-        <div class="button-group filter-button-group">        
-            <button data-filter="*" class="is-checked"><?php esc_html_e( 'All', 'perfect-portfolio' ); ?></button>
-            <?php
-                foreach( $terms as $t ){
-                    if( $home ){
-                        if( in_array( $t->term_id, $term_ids ) )
-                        echo '<button data-filter=".' . esc_attr( $t->slug ) .  '">' . esc_html( $t->name ) . '</button>';
-                    }else{
-                        echo '<button data-filter=".' . esc_attr( $t->slug ) .  '">' . esc_html( $t->name ) . '</button>';    
-                    } 
-                    
-                } 
-            ?>
-        </div>            
-        <?php
-        }
-    }
-}
-endif;
-
-if( ! function_exists( 'perfect_portfolio_get_portfolios' ) ) :
-/**
- * Query for portfolios 
-*/
-function perfect_portfolio_get_portfolios( $no_of_portfolio = -1 ){
-
-    global $post;
-    $portfolio_qry = new WP_Query( array( 'post_type' => 'rara-portfolio', 'post_status' => 'publish', 'posts_per_page' => $no_of_portfolio ) );
-    if( taxonomy_exists( 'rara_portfolio_categories' ) && $portfolio_qry->have_posts() ){ ?>
-                        
-        <div class="gallery-wrap">
-            <?php
-            while( $portfolio_qry->have_posts() ){
-                $portfolio_qry->the_post();
-                $terms = get_the_terms( get_the_ID(), 'rara_portfolio_categories' );
-                $s = '';
-                $i = 0;
-                if( $terms ){
-                    foreach( $terms as $t ){
-                        $i++;
-                        $s .= $t->slug;
-                        if( count( $terms ) > $i ){
-                            $s .= ' ';
-                        }
-                    }
-                } ?>                   
-                <div class="gallery-img <?php echo esc_attr( $s ); ?>">
-                    <?php if( has_post_thumbnail() ) { ?>
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'perfect-portfolio-square', array( 'itemprop' => 'image' ) ); ?></a>
-                    <?php }else {
-                        echo '<img src="' . esc_url( get_template_directory_uri() . '/images/perfect-portfolio-square.jpg'  ) . '" alt="' . esc_attr( get_the_title() ) . '" itemprop="image" />';
-                    } ?>
-                    <div class="text-holder">
-                        <div class="text-holder-inner">
-                            <h2 class="gal-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <?php $category_ids = get_the_terms( $post, 'rara_portfolio_categories');
-                            if( ! empty( $category_ids ) ) { ?>
-                                <span class="sub-title">
-                                    <?php 
-                                    foreach( $category_ids as $category_id ){
-                                        echo '<span>' . esc_html( $category_id->name ) . '</span>'; 
-                                    } ?>
-                                </span>
-                            <?php } ?>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-        </div><!-- .row .grid -->
-        <?php
-        wp_reset_postdata(); 
-    } 
-}
-endif;
 
 if( !function_exists( 'perfect_portfolio_cpt_has_archive' ) ) :
 /**

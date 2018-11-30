@@ -88,11 +88,6 @@ function perfect_portfolio_setup() {
 		'posts' => array( 
                 'home', 
                 'blog',
-                'portfolios' => array(
-                    'post_type'  => 'page',
-                    'post_title' => 'Portfolios',
-                    'template'   => 'templates/portfolio.php',
-                ),
         ),
 		
         // Default to a static front page and assign the front and posts pages.
@@ -110,11 +105,6 @@ function perfect_portfolio_setup() {
 				'items' => array(
 					'page_home',
 					'page_blog',
-                    'page_portfolios'=> array(
-                        'type'      => 'post_type',
-                        'object'    => 'page',
-                        'object_id' => '{{portfolios}}',
-                    ),
 				)
 			)
 		),
@@ -178,10 +168,6 @@ function perfect_portfolio_scripts(){
     $build  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '/build' : '';
     $suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-    wp_enqueue_style( 'owl-theme-default', get_template_directory_uri(). '/css' . $build . '/owl.theme.default' . $suffix . '.css', array(), '2.2.1' );
-
-    wp_enqueue_style( 'owl-carousel', get_template_directory_uri(). '/css' . $build . '/owl.carousel' . $suffix . '.css', array(), '2.2.1' );
-
     wp_enqueue_style( 'perfect-portfolio-google-fonts', perfect_portfolio_fonts_url(), array(), null );
 
     wp_enqueue_style( 'perfect-scrollbar', get_template_directory_uri(). '/css'. $build .'/perfect-scrollbar'. $suffix .'.css', array(), '1.3.0' );
@@ -191,8 +177,6 @@ function perfect_portfolio_scripts(){
     if( perfect_portfolio_is_woocommerce_activated() ) {
         wp_enqueue_style( 'perfect-portfolio-woocommerce-style', get_template_directory_uri(). '/css' . $build . '/woocommerce-style' . $suffix . '.css', array( 'perfect-portfolio-style' ), PERFECT_PORTFOLIO_THEME_VERSION );
     }
-    wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js' . $build . '/owl.carousel' . $suffix . '.js', array( 'jquery' ), '2.2.1', true );
-
     wp_enqueue_script( 'perfect-scrollbar', get_template_directory_uri() . '/js'. $build .'/perfect-scrollbar'. $suffix .'.js', array('jquery'), '1.3.0', true );
 
     wp_enqueue_script( 'isotope-pkgd', get_template_directory_uri() . '/js' . $build . '/isotope.pkgd' . $suffix . '.js', array( 'jquery' ), '3.0.5', true );
