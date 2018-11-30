@@ -824,7 +824,6 @@ body.custom-background #page {
   color: #1c1b1b;
 }
 
-.custom-background .woocommerce-store-notice,
 .custom-background p.demo_store {
   max-width: 1500px;
   margin: 0 auto;
@@ -3502,7 +3501,6 @@ RESPONSIVE STYLESHEET
     width: 40%;
   }
 
-  .custom-background .woocommerce-store-notice,
   .custom-background p.demo_store {
     padding-left: 2%;
     padding-right: 2%;

@@ -174,9 +174,6 @@ function perfect_portfolio_scripts(){
     
     wp_enqueue_style( 'perfect-portfolio-style', get_stylesheet_uri(), array(), PERFECT_PORTFOLIO_THEME_VERSION );
 
-    if( perfect_portfolio_is_woocommerce_activated() ) {
-        wp_enqueue_style( 'perfect-portfolio-woocommerce-style', get_template_directory_uri(). '/css' . $build . '/woocommerce-style' . $suffix . '.css', array( 'perfect-portfolio-style' ), PERFECT_PORTFOLIO_THEME_VERSION );
-    }
     wp_enqueue_script( 'perfect-scrollbar', get_template_directory_uri() . '/js'. $build .'/perfect-scrollbar'. $suffix .'.js', array('jquery'), '1.3.0', true );
 
     wp_enqueue_script( 'isotope-pkgd', get_template_directory_uri() . '/js' . $build . '/isotope.pkgd' . $suffix . '.js', array( 'jquery' ), '3.0.5', true );

@@ -390,15 +390,9 @@ function perfect_portfolio_sidebar( $class = false ){
                 }
             }
         }
-    }elseif( perfect_portfolio_is_woocommerce_activated() && ( is_shop() || is_product_category() || is_product_tag() || get_post_type() == 'product' ) ){
-        if( is_active_sidebar( 'shop-sidebar' ) ){            
-            $return = $class ? 'rightsidebar' : false;         
-        }else{
-            $return = $class ? 'full-width' : false;
-        } 
     }else{
         $return = $class ? 'full-width' : false;
-    }     
+    }
     return $return;
 
 }
@@ -473,13 +467,6 @@ endif;
 */
 function perfect_portfolio_is_rtc_activated(){
     return class_exists( 'RaraTheme_Companion' ) ? true : false;        
-}
-
-/**
- * Query WooCommerce activation
- */
-function perfect_portfolio_is_woocommerce_activated() {
-	return class_exists( 'woocommerce' ) ? true : false;
 }
 
 if( !function_exists( 'perfect_portfolio_cpt_has_archive' ) ) :

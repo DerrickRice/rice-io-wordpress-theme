@@ -52,7 +52,6 @@ if( ! function_exists( 'perfect_portfolio_header' ) ) :
 */
 function perfect_portfolio_header(){
 
-    $ed_cart = get_theme_mod( 'ed_shopping_cart', false );
     $ed_header_search = get_theme_mod( 'ed_header_search', false );
     $menu_description = get_theme_mod( 'menu_description', '' );
     $site_title = get_bloginfo( 'name' );
@@ -90,7 +89,6 @@ function perfect_portfolio_header(){
             </div><!-- .site-branding -->
         <?php endif; ?>
         <div id="header-r">
-            <?php if( perfect_portfolio_is_woocommerce_activated() && $ed_cart ) perfect_portfolio_wc_cart_count(); ?>
             <?php if( $ed_header_search ) : ?>
             <div class="header-search">
                 <span class="search-toggle-btn"><i class="fa fa-search"></i></span>

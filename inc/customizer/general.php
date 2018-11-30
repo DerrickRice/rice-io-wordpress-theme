@@ -27,28 +27,6 @@ function perfect_portfolio_customize_register_general( $wp_customize ) {
         )
     );
     
-    /** Enable Cart */
-    $wp_customize->add_setting( 
-        'ed_shopping_cart', 
-        array(
-            'default'           => false,
-            'sanitize_callback' => 'perfect_portfolio_sanitize_checkbox'
-        ) 
-    );
-    
-    $wp_customize->add_control(
-        new Perfect_Portfolio_Toggle_Control( 
-            $wp_customize,
-            'ed_shopping_cart',
-            array(
-                'section'     => 'header_settings',
-                'label'       => __( 'Enable Cart', 'perfect-portfolio' ),
-                'description' => __( 'Enable to show cart in header.', 'perfect-portfolio' ),
-                'active_callback' => 'perfect_portfolio_is_woocommerce_activated',
-            )
-        )
-    );
-
     /** Enable Header Search */
     $wp_customize->add_setting( 
         'ed_header_search', 

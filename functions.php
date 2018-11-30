@@ -73,10 +73,3 @@ require get_template_directory() . '/css/style.php';
  * Plugin Recommendation
 */
 require get_template_directory() . '/inc/tgmpa/recommended-plugins.php';
-
-/**
- * Add theme compatibility function for woocommerce if active
-*/
-if( perfect_portfolio_is_woocommerce_activated() ){
-    require get_template_directory() . '/inc/woocommerce-functions.php';    
-}
