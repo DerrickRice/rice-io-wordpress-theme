@@ -11,31 +11,31 @@
  *
  * @package Perfect_Portfolio
  */
-get_header(); 
+get_header();
 perfect_portfolio_tc_wrapper_start(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main">
 
-			<?php
-			while ( have_posts() ) : the_post();
+      <?php
+      while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+        get_template_part( 'template-parts/content', 'page' );
 
-			endwhile; // End of the loop.
-			
-			perfect_portfolio_entry_footer();
+      endwhile; // End of the loop.
 
-			/**
-             * Comment Template
-             * 
-             * @hooked perfect_portfolio_comment
-            */
-            do_action( 'perfect_portfolio_after_page_content' );
-			?>
+      perfect_portfolio_entry_footer();
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+      /**
+       * Comment Template
+       *
+       * @hooked perfect_portfolio_comment
+      */
+      do_action( 'perfect_portfolio_after_page_content' );
+      ?>
+
+    </main><!-- #main -->
+  </div><!-- #primary -->
 <?php
 get_sidebar();
 perfect_portfolio_tc_wrapper_ends();
