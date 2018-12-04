@@ -13,21 +13,6 @@ function perfect_portfolio_widgets_init(){
             'id'          => 'sidebar', 
             'description' => __( 'Default Sidebar', 'perfect-portfolio' ),
         ),
-        'about'   => array(
-            'name'        => __( 'About Section', 'perfect-portfolio' ),
-            'id'          => 'about', 
-            'description' => __( 'Add "Rara:A Featured Page Widget" or "Rara:Icon Text" widget for about section.', 'perfect-portfolio' ),
-        ),
-        'cta' => array(
-            'name'        => __( 'Call To Action Section', 'perfect-portfolio' ),
-            'id'          => 'cta', 
-            'description' => __( 'Add "Rara:Call To Action" widget for Call to Action section.', 'perfect-portfolio' ),
-        ),
-        'services' => array(
-            'name'        => __( 'Services Section', 'perfect-portfolio' ),
-            'id'          => 'services', 
-            'description' => __( 'Add "Rara:Icon Text" widget for service section.', 'perfect-portfolio' ),
-        ),
         'cta-footer' => array(
             'name'        => __( 'Call To Action Footer', 'perfect-portfolio' ),
             'id'          => 'cta-footer', 

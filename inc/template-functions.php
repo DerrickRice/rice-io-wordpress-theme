@@ -150,10 +150,9 @@ if( ! function_exists( 'perfect_portfolio_content_start' ) ) :
  * Content Start
 */
 function perfect_portfolio_content_start(){
-    $home_sections = perfect_portfolio_get_home_sections();
     $sidebar = perfect_portfolio_sidebar( true );
 
-    if( !( is_front_page() && ! is_home() && $home_sections ) ){ ?>
+    if( !( is_front_page() && ! is_home() && false ) ){ ?>
     <div id="content" class="site-content">
         <?php if( ! is_singular() ) :
             $add_class_name = ( is_home() ) ? 'description' : 'header';
@@ -560,9 +559,7 @@ if( ! function_exists( 'perfect_portfolio_content_end' ) ) :
  * Content End
 */
 function perfect_portfolio_content_end(){
-    $home_sections = perfect_portfolio_get_home_sections();
-
-    if( !( is_front_page() && ! is_home() && $home_sections ) ){ ?>
+    if( !( is_front_page() && ! is_home() && false ) ){ ?>
     </div><!-- .site-content -->
     <?php
     }

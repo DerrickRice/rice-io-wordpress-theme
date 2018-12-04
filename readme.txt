@@ -1,4 +1,4 @@
-=== Perfect Portfolio ===
+=== RiceIO ===
 
 Contributors: Rara Theme (http://raratheme.com/)
 Requires at least: 4.7
@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-menu, custom-logo, featured-images, threaded-comments, full-width-template, rtl-language-support, translation-ready, theme-options, e-commerce, portfolio
 
 == Description ==
-Perfect Portfolio is a clean, elegant and responsive WordPress theme dedicated for portfolio and blogs. Perfect Portfolio theme has wide list of customizable features including front page customizable sections with customizer api and widgets, and many more options. It comes with cross-browser compatibility, mobile friendly design and responsive features.
+This has been entirely gutted from Perfect Portfolio to the point that it shares very little.
 
 == Installation ==
 
@@ -18,55 +18,10 @@ Perfect Portfolio is a clean, elegant and responsive WordPress theme dedicated f
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Documentation for Front Page Setup ==
-
-A. About Section
-
-    1. Go to Appearance> Customize>FrontPage Settings> About Section
-    2. To add featured page on frontpage Click on Add a Widget then select Rara:FeaturedPage Widget. Fill in the details.
-    3. Click Save & Publish.
-
-    Note: For Featured Page section first activate RaraTheme Companion Plugin.
-    Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
-
-B. Gallery Section
-
-    1. Go to Appearance> Customize>FrontPage Settings> Gallery Section
-    2. Check Enable Gallery Section to display it in the Homepage.
-    3. You can set number of portfolio and set title fot vial  all button.
-    4. Click Save and Publish.
-
-    Note: For Service section first activate RaraTheme Companion Plugin.
-    Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
-
-C. Services Section
-
-    1. Go to Appearance> Customize>FrontPage Settings> Services Section
-    2. To add title for service section Click on Add a Widget then select Text Widget and fill the details.
-    3. Then Click on Add a Widget and select Rara:IconText Widget to get the content for this section. Fill in the details.
-    4. Click Save & Publish.
-
-    Note: For Service section first activate RaraTheme Companion Plugin.
-    Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
-
-D. Call to Action Section
-
-    1. Go to Appearance> Customize> FrontPage Settings> Call to Action Section
-    2. To add call to action section on frontpage Click on Add a Widget then select Rara:CallToAction Widget. Fill in the details.
-    3. Click Save and Publish.
-
-      Note: For Call to Action section first activate RaraTheme Companion Plugin.
-      Link To Plugin : https://wordpress.org/plugins/raratheme-companion/
-
-E. Blog Section
-
-    1. Go to Appearance> Customize> FrontPage Settings> Blog Section
-    2. This section will show three recent posts.
-    3. You can add title for this section.
-    4. Also you can enable/disable button on this section.
-    5. Click Save and Publish.
-
 == Copyright ==
+
+RiceIO Copyright 2018 Derrick Rice, https://www.rice.io
+RiceIO is distributed under the terms of the GNU GPL
 
 Perfect Portfolio WordPress Theme, Copyright 2018 raratheme.com
 Perfect Portfolio is distributed under the terms of the GNU GPL

@@ -424,32 +424,6 @@ function perfect_portfolio_get_posts( $post_type = 'post' ){
 }
 endif;
 
-if( ! function_exists( 'perfect_portfolio_get_home_sections' ) ) :
-/**
- * Returns Home Sections 
-*/
-function perfect_portfolio_get_home_sections(){
-    $sections = array( 
-        'about'       => array( 'sidebar' => 'about' ),
-        'services'    => array( 'sidebar' => 'services' ),
-        'cta'         => array( 'sidebar' => 'cta' ),
-        'blog'        => array( 'section' => 'blog' ) 
-    );
-    
-    $enabled_section = array();
-    
-    foreach( $sections as $k => $v ){
-        if( array_key_exists( 'sidebar', $v ) ){
-            if( is_active_sidebar( $v['sidebar'] ) ) array_push( $enabled_section, $v['sidebar'] );
-        }else{
-            if( get_theme_mod( 'ed_' . $v['section'] . '_section', true ) ) array_push( $enabled_section, $v['section'] );
-        }
-    }  
-    
-    return apply_filters( 'perfect_portfolio_home_sections', $enabled_section );
-}
-endif;
-
 if( ! function_exists( 'perfect_portfolio_escape_text_tags' ) ) :
 /**
  * Remove new line tags from string

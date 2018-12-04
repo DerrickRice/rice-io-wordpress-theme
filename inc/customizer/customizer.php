@@ -8,7 +8,7 @@
 /**
  * Requiring customizer panels & sections
 */
-$perfect_portfolio_panels = array( 'info', 'site', 'appearance', 'layout', 'general', 'frontpage', 'footer' );
+$perfect_portfolio_panels = array( 'site', 'appearance', 'layout', 'general', 'frontpage', 'footer' );
 
 foreach( $perfect_portfolio_panels as $p ){
     require get_template_directory() . '/inc/customizer/' . $p . '.php';
@@ -28,13 +28,31 @@ require get_template_directory() . '/inc/customizer/active-callback.php';
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function perfect_portfolio_customize_preview_js() {
-	wp_enqueue_script( 'perfect-portfolio-customizer', get_template_directory_uri() . '/inc/js/customizer.js', array( 'customize-preview' ), PERFECT_PORTFOLIO_THEME_VERSION, true );
+    wp_enqueue_script(
+        'perfect-portfolio-customizer',
+        get_template_directory_uri() . '/inc/js/customizer.js',
+        array( 'customize-preview' ),
+        PERFECT_PORTFOLIO_THEME_VERSION,
+        true
+    );
 }
 add_action( 'customize_preview_init', 'perfect_portfolio_customize_preview_js' );
 
 function perfect_portfolio_customize_script(){
-    wp_enqueue_style( 'perfect-portfolio-customize', get_template_directory_uri() . '/inc/css/customize-controls.css', array(), false , 'screen' );
-    wp_enqueue_script( 'perfect-portfolio-customize', get_template_directory_uri() . '/inc/js/customize.js', array( 'jquery', 'customize-controls' ), PERFECT_PORTFOLIO_THEME_VERSION, true );
+    wp_enqueue_style(
+        'perfect-portfolio-customize',
+        get_template_directory_uri() . '/inc/css/customize-controls.css',
+        array(),
+        false ,
+        'screen'
+    );
+    wp_enqueue_script(
+        'perfect-portfolio-customize',
+        get_template_directory_uri() . '/inc/js/customize.js',
+        array( 'jquery', 'customize-controls' ),
+        PERFECT_PORTFOLIO_THEME_VERSION,
+        true
+    );
 }
 add_action( 'customize_controls_enqueue_scripts', 'perfect_portfolio_customize_script' );
 
@@ -46,12 +64,12 @@ require get_template_directory() . '/inc/customizer-plugin-recommend/customizer-
 require get_template_directory() . '/inc/customizer-plugin-recommend/plugin-install/class-plugin-install-helper.php';
 
 $config_customizer = array(
-    'recommended_plugins' => array( 
+    'recommended_plugins' => array(
         'raratheme-companion' => array(
             'recommended' => true,
-            'description' => sprintf( 
+            'description' => sprintf(
                 /* translators: %s: plugin name */
-                esc_html__( 'If you want to take full advantage of the features this theme has to offer, please install and activate %s plugin.', 'perfect-portfolio' ), '<strong>RaraTheme Companion</strong>' 
+                esc_html__( 'If you want to take full advantage of the features this theme has to offer, please install and activate %s plugin.', 'perfect-portfolio' ), '<strong>RaraTheme Companion</strong>'
             ),
         ),
     ),
