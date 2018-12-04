@@ -212,28 +212,24 @@ if( ! function_exists( 'perfect_portfolio_body_classes' ) ) :
  * @return array
  */
 function perfect_portfolio_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-    
+    // Adds a class of hfeed to non-singular pages.
+    if ( ! is_singular() ) {
+        $classes[] = 'hfeed';
+    }
+
     // Adds a class of custom-background-image to sites with a custom background image.
-	if ( get_background_image() ) {
-		$classes[] = 'custom-background-image';
-	}
-    
+    if ( get_background_image() ) {
+        $classes[] = 'custom-background-image';
+    }
+
     // Adds a class of custom-background-color to sites with a custom background color.
     if ( get_background_color() != 'ffffff' ) {
-		$classes[] = 'custom-background-color';
-	}
-    
+        $classes[] = 'custom-background-color';
+    }
+
     $classes[] = perfect_portfolio_sidebar( true );
 
-    if( is_front_page() ) {
-        $classes[] = 'centered-content';
-    }
-    
-	return $classes;
+    return $classes;
 }
 endif;
 add_filter( 'body_class', 'perfect_portfolio_body_classes' );

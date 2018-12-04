@@ -27,7 +27,7 @@ body {
     text-align: left;
 }
 
-.header-r .header-search, 
+.header-r .header-search,
 .header-r span.fa.fa-bars {
     margin-left: 0;
     margin-right: 10px;
@@ -71,7 +71,7 @@ body {
     left: -20px;
 }
 
-.header-r .head-search-form:before, 
+.header-r .head-search-form:before,
 .header-r .head-search-form:after {
     right: auto;
     left: 35px;
@@ -86,11 +86,11 @@ body {
     margin-right: 20px;
 }
 
-.article-block header.entry-header, 
-.widget_raratheme_companion_faqs_widget .accordion li, 
-.bottom-footer, .article-wrap, .related .related-post-title, .additional-posts .block .block-title, 
-.additional-posts.portfolio-related .block .entry-meta, 
-.widget_raratheme_featured_page_widget .widget-featured-holder, .block-wrap, 
+.article-block header.entry-header,
+.widget_raratheme_companion_faqs_widget .accordion li,
+.bottom-footer, .article-wrap, .related .related-post-title, .additional-posts .block .block-title,
+.additional-posts.portfolio-related .block .entry-meta,
+.widget_raratheme_featured_page_widget .widget-featured-holder, .block-wrap,
 .full-width.single-post .additional-posts .entry-meta {
     text-align: right;
 }
@@ -120,7 +120,7 @@ body {
     direction: ltr;
 }
 
-.widget_raratheme_popular_post ul li .post-thumbnail, 
+.widget_raratheme_popular_post ul li .post-thumbnail,
 .widget_raratheme_recent_post ul li .post-thumbnail {
     float: right;
     margin-right: 0;
@@ -142,7 +142,7 @@ body {
     padding-right: 70px;
 }
 
-.widget_raratheme_companion_stat_counter_widget .image-holder, 
+.widget_raratheme_companion_stat_counter_widget .image-holder,
 .widget_raratheme_companion_stat_counter_widget .icon-holder {
     left: auto;
     right: 0;
@@ -157,35 +157,15 @@ body {
     left: 20px;
 }
 
-.widget_rrtc_testimonial_widget .testimonial-content::before, 
-.widget_rrtc_testimonial_widget .testimonial-content::after {
-    left: auto;
-    right: 50px;
-    -webkit-transform: skew(-45deg);
-    -moz-transform: skew(-45deg);
-    transform: skew(-45deg);
-}
-
-.widget_rrtc_testimonial_widget .testimonial-content::after {
-    left: auto;
-    right: 54px;
-}
-
-.widget_rrtc_testimonial_widget .img-holder {
-    float: right;
-    margin-right: 0;
-    margin-left: 19px;
-}
-
-.comment-navigation .nav-previous, 
-.posts-navigation .nav-previous, 
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
 .post-navigation .nav-previous {
     float: right;
     text-align: right;
 }
 
-.comment-navigation .nav-next, 
-.posts-navigation .nav-next, 
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
 .post-navigation .nav-next {
     text-align: left;
 }
@@ -213,12 +193,12 @@ body {
     right: auto;
 }
 
-.rightsidebar .additional-posts, 
+.rightsidebar .additional-posts,
 .leftsidebar .additional-posts {
     text-align: right;
 }
 
-.comments-area .comments-title, 
+.comments-area .comments-title,
 .comment-respond .comment-reply-title {
     text-align: right;
 }
@@ -291,11 +271,6 @@ blockquote {
     text-align: right;
 }
 
-.about-content-wrap .widget_raratheme_featured_page_widget .featured_page_content {
-    padding-left: 0;
-    padding-right: 30px;
-}
-
 .resume-wrap .widget_text:not(:first-child) .textwidget {
     float: left;
 }
@@ -339,16 +314,16 @@ blockquote {
     margin-left: 0;
 }
 
-.related .related-block, .additional-posts .block, 
-.single-centered .additional-posts .block:nth-child(3n), 
-.single-post.rightsidebar .additional-posts .block:nth-child(3n), 
+.related .related-block, .additional-posts .block,
+.single-centered .additional-posts .block:nth-child(3n),
+.single-post.rightsidebar .additional-posts .block:nth-child(3n),
 .single-post.leftsidebar .additional-posts .block:nth-child(3n) {
     margin-right: 0;
     margin-left: 2.5%;
 }
 
-.single-centered .additional-posts .block:nth-child(2n), 
-.single-post.rightsidebar .additional-posts .block:nth-child(2n), 
+.single-centered .additional-posts .block:nth-child(2n),
+.single-post.rightsidebar .additional-posts .block:nth-child(2n),
 .single-post.leftsidebar .additional-posts .block:nth-child(2n) {
     margin-left: 0;
 }
