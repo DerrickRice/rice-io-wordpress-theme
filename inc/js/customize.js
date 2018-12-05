@@ -19,8 +19,6 @@ jQuery(document).ready(function($){
 	wp.customize.section( 'sidebar-widgets-about' ).priority( '20' );
     wp.customize.section( 'sidebar-widgets-services' ).panel( 'frontpage_settings' );
     wp.customize.section( 'sidebar-widgets-services' ).priority( '30' );
-    wp.customize.section( 'sidebar-widgets-cta' ).panel( 'frontpage_settings' );
-	wp.customize.section( 'sidebar-widgets-cta' ).priority( '35' );
     
     //Scroll to section
     $('body').on('click', '#sub-accordion-panel-frontpage_settings .control-subsection .accordion-section-title', function(event) {
@@ -40,10 +38,6 @@ function scrollToSection( section_id ){
         preview_section_id = "about_section";
         break;
         
-        case 'accordion-section-sidebar-widgets-cta':
-        preview_section_id = "cta_section";
-        break;
-                
         case 'accordion-section-sidebar-widgets-services':
         preview_section_id = "service_section";
         break;

@@ -5,7 +5,7 @@ GitHub Theme URI: DerrickRice/rice-io-wordpress-theme
 Author: Derrick Rice
 Author URI: https://rice.io
 Description: Specifically for https://rice.io.
-Version: 1.2.1
+Version: 1.2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: perfect-portfolio
@@ -22,28 +22,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-  ## Links
-  ## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-  ## Posts and pages
-  ## Comments
-# Infinite scroll
-# Media
-  ## Captions
-  ## Galleries
-  --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -1547,108 +1526,7 @@ ul.social-icons {
   border-radius: 40px;
 }
 
-/*===========================
-ABOUT SECTION
-===========================*/
-.left-content .about-section .widget {
-  margin-top: 60px;
-}
-.left-content .about-section .widget_rrtc_icon_text_widget .rtc-itw-holder {
-  padding-left: 0;
-}
-.left-content .about-section .widget_rrtc_icon_text_widget .icon-holder {
-  width: 170px;
-  height: 170px;
-  position: static;
-  margin-bottom: 30px;
-}
-.left-content section[class*="-section"] .widget_rrtc_icon_text_widget .icon-holder img {
-  width: auto;
-  height: auto;
-}
-.widget_rrtc_icon_text_widget .rtc-itw-inner-holder {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-#secondary .widget_rrtc_icon_text_widget .rtc-itw-inner-holder {
-  text-align: center;
-}
-.widget_rrtc_icon_text_widget .text-holder {
-  order: 2;
-}
-.widget_rrtc_icon_text_widget .icon-holder img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-}
-.about-section .widget_rrtc_icon_text_widget .icon-holder img {
-  width: 170px;
-  height: 170px;
-}
-.about-section .widget_rrtc_icon_text_widget .icon-holder {
-  width: 170px;
-  height: 170px;
-  border-radius: 100%;
-  overflow: hidden;
-  display: flex;
-  flex: auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.centered-content .widget_rrtc_icon_text_widget .icon-holder {
-  margin: 0 auto 30px auto;
-}
-#secondary .widget.widget_rrtc_icon_text_widget .widget-title {
-  font-size: 1.3em;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.widget_rrtc_icon_text_widget .text-holder .content {
-  font-size: 1.2em;
-  color: #676767;
-}
-#secondary .widget_rrtc_icon_text_widget .text-holder .content {
-  font-size: 1em;
-}
-.widget_rrtc_icon_text_widget .text-holder .content p {
-  margin-top: 0;
-  margin-bottom: 25px;
-}
-.widget_rrtc_icon_text_widget .text-holder .content p:last-child {
-  margin-bottom: 0;
-}
-.widget_rrtc_icon_text_widget .text-holder .content span {
-  color: #1c1b1b;
-  display: block;
-}
-
-.about-section .widget_raratheme_featured_page_widget .widget-featured-holder {
-  text-align: center;
-}
-.about-section .widget_raratheme_featured_page_widget .widget-featured-holder .section-subtitle {
-  order: 2;
-  margin-bottom: 0;
-  margin-top: 40px;
-}
-.about-section .widget_raratheme_featured_page_widget .section-subtitle + .text-holder {
-  margin-top: 10px;
-}
-.about-section .widget_raratheme_featured_page_widget .img-holder {
-  width: 170px;
-  height: 170px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 100%;
-  overflow: hidden;
-}
-.about-section .widget_raratheme_featured_page_widget .img-holder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* Header? */
 .page-header + .page-description {
   font-size: 1.25em;
   font-weight: 300;
@@ -1671,14 +1549,8 @@ ABOUT SECTION
 }
 
 /*======================
-SERVICE SECTION
+????
 ======================*/
-section.service-section {
-  margin-bottom: 90px;
-}
-.service-section .widget_text {
-  margin-bottom: 30px;
-}
 .centered-content .widget.widget_text {
   margin: 0 auto 30px auto;
 }
@@ -1690,196 +1562,13 @@ section[class*="-section"] .widget.widget_text .textwidget {
   margin-left: auto;
   margin-right: auto;
 }
-.service-section .widgets-holder {
-  display: flex;
-  flex: 1;
-  flex-flow: row wrap;
-}
-section.service-section .widget_rrtc_icon_text_widget {
-  width: 33.33%;
-  float: left;
-  margin-bottom: 0;
-  display: flex;
-  flex: auto;
-  flex-flow: column wrap;
-  padding: 30px;
-}
-.left-content section.service-section .widget_rrtc_icon_text_widget{
-  padding: 30px 30px 30px 0;
-}
-section[class*="-section"] .widget_rrtc_icon_text_widget:nth-child(3n) {
-  margin-right: 0;
-}
-.left-content .widget_rrtc_icon_text_widget .rtc-itw-holder {
-  position: relative;
-  padding-left: 75px;
-}
-.left-content .widget_rrtc_icon_text_widget .icon-holder {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.left-content .widget_rrtc_icon_text_widget .icon-holder svg {
-  font-size: 1.8em;
-  text-align: center;
-}
-section.service-section .widget:not(.widget_text) .widget-title {
-  font-size: 1.2em;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-section.service-section .widgets-holder .widget:not(.widget_text) .widget-title:after {
-  display: none;
-}
-.service-section a.btn-readmore {
-  margin-top: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-.widget_rrtc_icon_text_widget .icon-holder svg {
-  font-size: 2em;
-  display: block;
-}
 
-/*==========================
-CTA SECTION
-==========================*/
-.home .cta-section {
-  margin-bottom: 120px;
-}
-.widget_raratheme_companion_cta_widget > div {
-  background: #365899;
-  padding: 80px 40px;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.cta-section .widget_raratheme_companion_cta_widget > div {
-  min-height: 520px;
-}
-.widget_raratheme_companion_cta_widget .bttk-cta-bg::before {
-  content: "";
-  background: rgba(0,0,0,0.7);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.widget_raratheme_companion_cta_widget .bttk-cta-bg {
-  padding: 80px 20px;
-  position: relative;
-  z-index: 1;
-}
-body:not(.home) section.cta-section {
-  margin-bottom: 0;
-}
-
-.cta-section .tc-wrapper {
-  width: 100%;
-  padding: 0;
-}
-
-section[class*="-section"] .widget_raratheme_companion_cta_widget .raratheme-cta-container {
-  width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.widget-area .widget_raratheme_companion_cta_widget .widget-title {
-  color: #fff;
-}
-.v-center-inner {
-  display: table-cell;
-  width: 100%;
-  height: 100%;
-  vertical-align: middle;
-}
-.cta-section .v-center-inner {
-  display: block;
-}
-.widget_raratheme_companion_cta_widget {
-  color: #fff;
-}
-.cta-section .widget_raratheme_companion_cta_widget {
-  margin-bottom: 0;
-}
-.cta-section .raratheme-cta-container .widget-title {
-  font-size: 1.5em;
-  color: #fff;
-}
-.cta-section .raratheme-cta-container .widget-title:after {
-  display: none;
-}
 .text-holder p {
   margin-top: 0;
   margin-bottom: 20px;
 }
 .text-holder p:last-child {
   margin-bottom: 0;
-}
-.cta-section .button-wrap {
-  margin-top: 50px;
-}
-.button-wrap .btn-cta {
-  display: inline-block;
-  vertical-align: middle;
-  background: #fff;
-  color: #1c1b1b;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
-  padding: 18px 40px;
-  border-radius: 40px;
-}
-.button-wrap .btn-cta + .btn-cta {
-  margin-left: 10px;
-}
-.cta-section .button-wrap .btn-cta + .btn-cta {
-  margin-left: 20px;
-}
-.button-wrap .btn-cta:hover {
-  background: #1c1b1b;
-  color: #fff;
-}
-.widget_raratheme_companion_cta_widget .right .raratheme-cta-container {
-  position: relative;
-  text-align: left;
-}
-
-.widget-area .widget_raratheme_companion_cta_widget .right .raratheme-cta-container,
-.site-footer .widget_raratheme_companion_cta_widget .right .raratheme-cta-container {
-  padding-right: 15px;
-}
-
-section[class*="-section"] .widget_raratheme_companion_cta_widget .right .widget-title,
-section[class*="-section"] .widget_raratheme_companion_cta_widget .right .text-holder {
-  width: 60%;
-}
-
-.widget_raratheme_companion_cta_widget .right .button-wrap {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: 0;
-  width: 40%;
-  text-align: right;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.widget-area .widget_raratheme_companion_cta_widget .right .button-wrap,
-.site-footer .widget_raratheme_companion_cta_widget .right .button-wrap {
-  position: static;
-  width: auto;
-  -webkit-transform: none;
-  -moz-transform: none;
-  transform: none;
 }
 
 /*=============================
@@ -1949,437 +1638,14 @@ section.article-section {
 .article-section a.btn-readmore {
   margin-top: 50px;
 }
-.widget_raratheme_popular_post ul li .entry-header .entry-meta,
-.widget_raratheme_recent_post ul li .entry-header .entry-meta {
-  display: inline-block;
-}
-
-.widget_raratheme_popular_post ul li .entry-header .view-count,
-.widget_raratheme_recent_post ul li .entry-header .view-count {
-  font-weight: 400;
-  color: #676767;
-}
-
-.widget_raratheme_popular_post ul li .entry-header .entry-meta + .view-count {
-  margin-left: 15px;
-}
-
-/*====================================
-RARATHEME POPULAR POST WIDGET
-====================================*/
-.widget_raratheme_popular_post ul li,
-.widget_raratheme_recent_post ul li {
-  margin-bottom: 30px;
-}
-
-.widget_raratheme_popular_post ul li:last-child,
-.widget_raratheme_recent_post ul li:last-child {
-  margin-bottom: 0;
-}
-
-/*================================
-RARATHEME CTA WIDGET
-================================*/
-.site-footer .text-holder,
-#secondary .text-holder {
-  font-size: 0.8em;
-}
-
-.site-footer .button-wrap .btn-cta,
-#secondary .button-wrap .btn-cta {
-  font-size: 0.875em;
-  letter-spacing: 1px;
-  padding: 15px 30px;
-}
-
-/*==================================
-RARATHEME FEATURED PAGE WIDGET
-==================================*/
-.widget_raratheme_featured_page_widget .widget-featured-holder {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
-.widget_raratheme_featured_page_widget .text-holder {
-  order: 2;
-  margin-top: 30px;
-}
-
-.widget_raratheme_featured_page_widget .text-holder .section-subtitle {
-  margin-bottom: 0;
-  font-size: 0.875em;
-  color: #676767;
-}
-
-.widget_raratheme_featured_page_widget .text-holder .widget-title {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.widget_raratheme_featured_page_widget .text-holder .btn-readmore {
-  margin-top: 0;
-}
-
-/*===============================
-RARATHEME IMAGE WIDGET
-===============================*/
-.widget_raratheme_image_widget .raratheme-iw-inner-holder p {
-  font-size: 0.8em;
-}
-
-/*===============================
-RARATHEME STAT COUNTER WIDGET
-===============================*/
-.widget_raratheme_companion_stat_counter_widget .raratheme-sc-holder {
-  position: relative;
-  padding-left: 70px;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
-.widget_raratheme_companion_stat_counter_widget .widget-title {
-  font-size: 0.8em !important;
-  margin-bottom: 0;
-  order: 2;
-}
-
-.widget_raratheme_companion_stat_counter_widget .icon-holder {
-  font-size: 2.3em;
-  line-height: 1;
-  margin-bottom: 0;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  color: #b1b1b1;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.widget_raratheme_companion_stat_counter_widget .image-holder {
-  width: 60px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.widget_raratheme_companion_stat_counter_widget .image-holder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.widget_raratheme_companion_stat_counter_widget .odometer.odometer-auto-theme,
-.odometer.odometer-theme-default {
-  font-size: 2em;
-  line-height: 1.1;
-}
-
-/*================================
-RARATHEME TEAM WIDGET
-================================*/
-.widget_rrtc_description_widget .rtc-team-holder {
-  text-align: center;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder .text-holder {
-  margin-top: 20px;
-}
-
-.widget_rrtc_description_widget .text-holder .name {
-  font-size: 1.2em;
-  font-weight: 600;
-  display: block;
-}
-
-.widget_rrtc_description_widget .text-holder .designation {
-  font-size: 0.9em;
-  display: block;
-  color: #676767;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder .text-holder .description {
-  display: none;
-}
-
-.widget_rrtc_description_widget .social-profile {
-  margin-top: 15px;
-}
-
-.widget_rrtc_description_widget .social-profile li {
-  display: inline-block;
-  padding: 5px;
-  font-size: 0.9em;
-}
-
-.widget_rrtc_description_widget .social-profile li a {
-  display: inline-block;
-  vertical-align: middle;
-  width: 40px;
-  text-align: center;
-  height: 40px;
-  line-height: 40px;
-  background: #eee;
-  border-radius: 100%;
-  color: #1c1b1b;
-}
-
-.widget_rrtc_description_widget .social-profile li a:hover {
-  background: #365899;
-  color: #fff;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  z-index: 99999;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .rtc-team-inner-holder-modal {
-  max-width: 1170px;
-  margin: 0 auto;
-  color: #fff;
-  position: absolute;
-  padding-left: 480px;
-  left: 0;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .image-holder {
-  width: 450px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .close_popup {
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 100%;
-  border: 1px solid;
-  margin-top: 20px;
-  margin-right: 20px;
-  text-indent: 60px;
-  overflow: hidden;
-}
-.admin-bar .widget_rrtc_description_widget .rtc-team-holder-modal .close_popup {
-  top: 32px;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .close_popup:hover {
-  background: rgba(255,255,255,0.7);
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .close_popup::before,
-.widget_rrtc_description_widget .rtc-team-holder-modal .close_popup::after {
-  content: "";
-  background: #333;
-  width: 20px;
-  height: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .close_popup::after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .close_popup:hover::before,
-.widget_rrtc_description_widget .rtc-team-holder-modal .close_popup:hover::after {
-  background: #000;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .text-holder .name {
-  font-size: 1.8em;
-  line-height: 1;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .text-holder .designation {
-  font-size: 1.2em;
-  color: #ccc;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .text-holder .description {
-  margin-top: 15px;
-  max-height: 255px;
-  overflow: auto;
-  position: relative;
-}
-
-.widget_rrtc-description_widget .mCSB_container {
-  overflow: hidden;
-}
-
-.widget_rrtc_description_widget .mCustomScrollbar .mCSB_scrollTools {
-  width: 16px;
-  visibility: visible;
-  overflow: hidden;
-}
-
-.widget_rrtc_description_widget .mCSB_scrollTools .mCSB_draggerRail {
-  background: rgba(255,255,255,0.1);
-}
-
-.widget_rrtc_description_widget .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  background: rgba(255,255,255,0.25);
-}
-
-/*=========================
-RARATHEME FAQ WIDGET
-=========================*/
-.widget_raratheme_companion_faqs_widget .accordion {
-  text-align: right;
-}
-
-.widget_raratheme_companion_faqs_widget .expand-faq {
-  font-size: 0.8em;
-  display: inline-block;
-  border-bottom: 2px solid;
-  color: #676767;
-  margin-bottom: 30px;
-}
-
-.widget_raratheme_companion_faqs_widget .expand-faq svg {
-  font-weight: 600;
-  margin-right: 5px;
-}
-
-.widget_raratheme_companion_faqs_widget .accordion li {
-  text-align: left;
-  border-bottom: 1px solid #e5e5e5;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  margin-top: 0;
-}
-
-.widget_raratheme_companion_faqs_widget .accordion li a {
-  font-size: 0.9em;
-  font-weight: 600;
-  position: relative;
-}
-
-.widget_raratheme_companion_faqs_widget .accordion li a::after {
-  content: "\f107";
-  font-family: FontAwesome;
-  font-size: 1.3em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  line-height: 1.3;
-  -webkit-transition: all ease 0.35s;
-  -moz-transition: all ease 0.35s;
-  transition: all ease 0.35s;
-}
-
-.widget_raratheme_companion_faqs_widget .accordion li a.show::after {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.widget_raratheme_companion_faqs_widget .accordion li .inner {
-  font-size: 0.8em;
-  color: #676767;
-  margin-top: 10px;
-}
-
-/*=================================
-RARATHEME SOCIAL LINK WIDGET
-=================================*/
-.widget_raratheme_social_links ul {
-  font-size: 0.9em;
-}
-
-.widget_raratheme_social_links ul li {
-  margin-right: 9px;
-  margin-bottom: 10px;
-}
-
-.widget_raratheme_social_links ul li a {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 100%;
-}
-
-.widget_raratheme_social_links ul li a:hover,
-.widget_raratheme_social_links ul li a:focus {
-  opacity: 0.7;
-  filter: alpha(opacity=70);
-}
-
-/*============================
-RARATHEME CATEGORY SLIDER
-===========================*/
-.widget_rara_posts_category_slider_widget .carousel-title {
-  background: #f0f0f0;
-  padding: 20px;
-}
-.widget_rara_posts_category_slider_widget .carousel-title .cat-links {
-  display: inline-block;
-  color: #676767;
-}
-.widget_rara_posts_category_slider_widget .carousel-title .title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 0.9em;
-  font-weight: 600;
-}
 
 /*===========================
-RARATHEME SOCIAL LINKS
+???
 ===========================*/
 ul.social-networks {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-.widget_rtc_social_links ul li {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 5px;
-}
-.widget_rtc_social_links ul li a {
-  display: inline-block;
-  vertical-align: middle;
-  width: 40px;
-  text-align: center;
-  height: 40px;
-  line-height: 40px;
-  background: #1c1b1b;
-  color: #fff;
-  border-radius: 100%;
-}
-.widget_rtc_social_links ul li a:hover {
-  background: #365899;
-  color: #fff;
 }
 
 /*================================
@@ -2728,7 +1994,7 @@ SINGLE POST PAGE
 ============================*/
 .single-post.full-width figure.post-thumbnail,
 .centered figure.post-thumbnail,
-.page.full-width:not(.home) figure.post-thumbnail {
+.page.full-width figure.post-thumbnail {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -2876,7 +2142,7 @@ span.byline a.fn {
   background: #365899;
 }
 
-body.page:not(.home) header.entry-header {
+header.entry-header {
   text-align: center;
 }
 
@@ -3328,26 +2594,12 @@ RESPONSIVE STYLESHEET
     width: 100%;
   }
 
-  section[class*="-section"] .widget_raratheme_companion_cta_widget .raratheme-cta-container {
-    width: 100%;
-  }
-
   /*=======================
   BLOG PAGE
   =======================*/
   .article-wrap {
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .widget_rrtc_description_widget .rtc-team-holder-modal .rtc-team-inner-holder-modal {
-    padding-left: calc(40% + 20px);
-    padding-right: 3%;
-  }
-
-  .widget_rrtc_description_widget .rtc-team-holder-modal .image-holder {
-    left: 3%;
-    width: 35%;
   }
 }
 
@@ -3372,10 +2624,6 @@ RESPONSIVE STYLESHEET
   .rightsidebar.single-post .about-author .author-info-wrap,
   .leftsidebar.single-post .about-author .author-info-wrap {
     width: 70%;
-  }
-
-  .widget_raratheme_companion_cta_widget .button-wrap a {
-    margin: 5px;
   }
 
   /*===========================
@@ -3472,14 +2720,6 @@ RESPONSIVE STYLESHEET
     width: 100%;
   }
 
-  /*===========================
-  SERVICE SECTION
-  ===========================*/
-  section.service-section .widget_rrtc_icon_text_widget {
-    width: 50%;
-    padding: 20px;
-  }
-
   /*=======================
   FOOTER SECTION
   =======================*/
@@ -3560,7 +2800,6 @@ RESPONSIVE STYLESHEET
 }
 
 @media screen and (max-width: 640px) {
-  section.cta-section,
   section.article-section {
     margin-bottom: 80px;
   }
@@ -3597,13 +2836,6 @@ RESPONSIVE STYLESHEET
   }
   .social-icons li {
     padding: 0;
-  }
-
-  /*=======================
-  ABOUT SECTION
-  =======================*/
-  .left-content .about-section .widget {
-    margin-top: 0;
   }
 
   /*===========================
@@ -3690,75 +2922,10 @@ RESPONSIVE STYLESHEET
     width: 100%;
     text-align: center;
   }
-
-  /*========================
-  CALL TO ACTION WIDGET
-  ========================*/
-  .widget_raratheme_companion_cta_widget .right .raratheme-cta-container {
-    padding-right: 15px;
-  }
-
-  .widget_raratheme_companion_cta_widget .right .widget-title,
-  .widget_raratheme_companion_cta_widget .right .text-holder {
-    width: 100%;
-  }
-
-  .widget_raratheme_companion_cta_widget .right .button-wrap {
-    position: static;
-    width: auto;
-    -webkit-transform: none;
-    -moz-transform: none;
-    transform: none;
-  }
-
-  /*===========================
-  TEAM WIDGET
-  ===========================*/
-  .widget_rrtc_description_widget .rtc-team-holder-modal .rtc-team-inner-holder-modal {
-    padding-left: 3%;
-  }
-
-  .widget_rrtc_description_widget .rtc-team-holder-modal .image-holder {
-    position: static;
-    width: 30%;
-    float: left;
-    padding-left: 3%;
-    padding-right: 3%;
-  }
-
-  .widget_rrtc_description_widget .rtc-team-holder-modal .text-holder .description {
-    max-height: 120px;
-  }
-
-  .widget_rrtc_description_widget .rtc-team-holder-modal .social-profile {
-    float: right;
-    width: 70%;
-  }
-
-  .widget_rrtc_description_widget .rtc-team-holder-modal .social-profile li {
-    padding: 2px;
-  }
-
-  .widget_rrtc_description_widget .rtc-team-holder-modal .social-profile li a {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-  }
-
-  .widget_rrtc_description_widget .rtc-team-holder-modal .social-profile li a svg {
-    line-height: 30px;
-  }
 }
 
 /* mobile device mode, basically */
 @media screen and (max-width: 450px) {
-  .button-wrap .btn-cta {
-    display: block;
-  }
-  .cta-section .button-wrap .btn-cta + .btn-cta {
-    margin-left: 0;
-    margin-top: 10px;
-  }
   /*========================
   HEADER SECTION (mobile version)
   ========================*/
@@ -3788,16 +2955,6 @@ RESPONSIVE STYLESHEET
   #site-header .menu-wrap {
     width: 90%;
     padding: 30px 10px 30px 30px;
-  }
-
-  /*========================
-  SERVICE SECTION
-  ========================*/
-  section.service-section {
-    margin-bottom: 50px;
-  }
-  section.service-section .widget_rrtc_icon_text_widget {
-    width: 100%;
   }
 
   /*=======================

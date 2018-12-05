@@ -51,12 +51,6 @@ jQuery(document).ready(function($){
         }, 1000);
     });
 
-    if( $('.widget_rrtc_description_widget').length ){
-        $('.description').each(function(){
-            var psw = new PerfectScrollbar('.widget_rrtc_description_widget .rtc-team-holder-modal .text-holder .description');
-        });
-    }
-
     if( $('#header-r .menu-wrap').length ){
         var psw = new PerfectScrollbar('.menu-wrap');
     }

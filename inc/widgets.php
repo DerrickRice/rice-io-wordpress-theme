@@ -1,35 +1,30 @@
 <?php
 /**
  * Perfect Portfolio Widget Areas
- * 
+ *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  * @package Perfect_Portfolio
  */
 
-function perfect_portfolio_widgets_init(){    
+function perfect_portfolio_widgets_init(){
     $sidebars = array(
         'sidebar'   => array(
             'name'        => __( 'Sidebar', 'perfect-portfolio' ),
-            'id'          => 'sidebar', 
+            'id'          => 'sidebar',
             'description' => __( 'Default Sidebar', 'perfect-portfolio' ),
         ),
-        'cta-footer' => array(
-            'name'        => __( 'Call To Action Footer', 'perfect-portfolio' ),
-            'id'          => 'cta-footer', 
-            'description' => __( 'Add "Rara:Call To Action" widget in footer of specific pages.', 'perfect-portfolio' ),
-        ),
     );
-    
+
     foreach( $sidebars as $sidebar ){
         register_sidebar( array(
-    		'name'          => esc_html( $sidebar['name'] ),
-    		'id'            => esc_attr( $sidebar['id'] ),
-    		'description'   => esc_html( $sidebar['description'] ),
-    		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-    		'after_widget'  => '</section>',
-    		'before_title'  => '<h2 class="widget-title" itemprop="name">',
-    		'after_title'   => '</h2>',
-    	) );
+            'name'          => esc_html( $sidebar['name'] ),
+            'id'            => esc_attr( $sidebar['id'] ),
+            'description'   => esc_html( $sidebar['description'] ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title" itemprop="name">',
+            'after_title'   => '</h2>',
+        ) );
     }
 }
 add_action( 'widgets_init', 'perfect_portfolio_widgets_init' );

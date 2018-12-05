@@ -59,12 +59,6 @@ require get_template_directory() . '/inc/metabox.php';
 require get_template_directory() . '/inc/typography.php';
 
 /**
- * Raratheme companion Functions
- */
-if( perfect_portfolio_is_rtc_activated() ) {
-	require get_template_directory() . '/inc/rtc-filters.php';
-}
-/**
  * Dynamic Styles
  */
 require get_template_directory() . '/css/style.php';

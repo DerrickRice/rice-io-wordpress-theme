@@ -1,12 +1,9 @@
 /*
-Theme Name: Perfect Portfolio
-
 Adding support for languages written in a Right To Left (RTL) direction is easy -
 it's just a matter of overwriting all the horizontal positioning attributes
 of your CSS stylesheet in a separate stylesheet file named rtl.css.
 
 https://codex.wordpress.org/Right-to-Left_Language_Support
-
 */
 
 body {
@@ -81,30 +78,15 @@ body {
     float: right;
 }
 
-.cta-section .button-wrap .btn-cta + .btn-cta {
-    margin-left: 0;
-    margin-right: 20px;
-}
-
 .article-block header.entry-header,
-.widget_raratheme_companion_faqs_widget .accordion li,
-.bottom-footer, .article-wrap, .related .related-post-title, .additional-posts .block .block-title,
+.bottom-footer,
+.article-wrap,
+.related .related-post-title,
+.additional-posts .block .block-title,
 .additional-posts.portfolio-related .block .entry-meta,
-.widget_raratheme_featured_page_widget .widget-featured-holder, .block-wrap,
+.block-wrap,
 .full-width.single-post .additional-posts .entry-meta {
     text-align: right;
-}
-
-.widget_raratheme_companion_cta_widget .right .raratheme-cta-container {
-    padding-right: 0;
-    padding-left: 25%;
-    text-align: right;
-}
-
-.widget_raratheme_companion_cta_widget .right .button-wrap {
-    text-align: left;
-    right: auto;
-    left: 0;
 }
 
 .single-post .about-author .author-img {
@@ -118,34 +100,6 @@ body {
 
 .widget_tag_cloud .tagcloud a {
     direction: ltr;
-}
-
-.widget_raratheme_popular_post ul li .post-thumbnail,
-.widget_raratheme_recent_post ul li .post-thumbnail {
-    float: right;
-    margin-right: 0;
-    margin-left: 15px;
-}
-
-.button-wrap .btn-cta + .btn-cta {
-    margin-left: 0;
-    margin-right: 10px;
-}
-
-.widget_raratheme_companion_faqs_widget .accordion li a::after {
-    right: auto;
-    left: 0;
-}
-
-.widget_raratheme_companion_stat_counter_widget .raratheme-sc-holder {
-    padding-left: 0;
-    padding-right: 70px;
-}
-
-.widget_raratheme_companion_stat_counter_widget .image-holder,
-.widget_raratheme_companion_stat_counter_widget .icon-holder {
-    left: auto;
-    right: 0;
 }
 
 .bottom-footer .foot-social {
@@ -295,16 +249,6 @@ blockquote {
     margin-left: 0;
 }
 
-.widget_rrtc_description_widget .rtc-team-holder-modal .rtc-team-inner-holder-modal {
-    padding-left: 0;
-    padding-right: 480px;
-}
-
-.widget_rrtc_description_widget .rtc-team-holder-modal .image-holder {
-    left: auto;
-    right: 0;
-}
-
 .article-holder .article-block {
     float: right;
     margin-right: 0;
@@ -332,25 +276,6 @@ blockquote {
 }
 
 
-/*responsive css*/
-@media screen and (max-width: 1415px){
-    .widget_raratheme_companion_cta_widget .right .raratheme-cta-container {
-        padding-left: 40%;
-    }
-}
-
-@media screen and (max-width: 1220px) {
-    .widget_rrtc_description_widget .rtc-team-holder-modal .rtc-team-inner-holder-modal {
-        padding-left: 3%;
-        padding-right: calc(40% + 20px);
-    }
-
-    .widget_rrtc_description_widget .rtc-team-holder-modal .image-holder {
-        left: auto;
-        right: 3%;
-    }
-}
-
 @media screen and (max-width: 800px) {
     .related .related-block:nth-child(2n), .additional-posts .block:nth-child(2n) {
         margin-left: 0;
@@ -361,26 +286,7 @@ blockquote {
     }
 }
 
-@media screen and (max-width: 640px) {
-    .widget_rrtc_description_widget .rtc-team-holder-modal .rtc-team-inner-holder-modal {
-        padding-right: 3%;
-    }
-    .widget_rrtc_description_widget .rtc-team-holder-modal .image-holder {
-        float: right;
-    }
-    .widget_rrtc_description_widget .rtc-team-holder-modal .social-profile {
-        float: left;
-    }
-    .widget_raratheme_companion_cta_widget .right .raratheme-cta-container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-}
-
 @media screen and (max-width: 540px) {
-    .cta-section .button-wrap .btn-cta + .btn-cta {
-        margin-right: 0;
-    }
     .article-holder .article-block {
         float: none;
         margin-left: 0;
